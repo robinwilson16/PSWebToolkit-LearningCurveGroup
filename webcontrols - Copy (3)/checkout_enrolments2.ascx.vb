@@ -1,0 +1,298 @@
+﻿
+
+Imports CompassCC.CCCSystem.CCCCommon
+Imports CompassCC.ProSolution.PSWebEnrolmentKit
+
+
+Partial Class webcontrols_checkout_enrolments2
+    Inherits CheckoutBaseControl
+
+    Protected Overrides Sub OnLoad(e As EventArgs)
+
+        'If Not Session("agecourse") Is Nothing Then lblAgeCourse.Text = CType("Your age on " & Session("startdate") & ": " & Session("agecourse") & " (" & Session("ageGroup"), String) & ")"
+
+        If Not IsPostBack Then
+            If Session("euro") <> "" Then selectEuro.SelectedValue = Session("euro")
+            If Session("dis") <> "" Then selectLearnDiff.SelectedValue = Session("dis")
+            selectPreSettle.SelectedValue = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined20
+            selectEducation.SelectedValue = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined21
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined22 = "True" Then chkDiscretionaryRemain.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined22
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined23 = "True" Then chkExceptional.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined23
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined24 = "True" Then chkIndefinite.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined24
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined25 = "True" Then chkAfghan.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined25
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined26 = "True" Then chkHumanitarian.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined26
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined27 = "True" Then chkOutside.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined27
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined28 = "True" Then chkhusband.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined28
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined29 = "True" Then chkSection67.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined29
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined30 = "True" Then chkCalais.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined30
+            'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined46 = "True" Then chkAfghanPitting.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined46
+            'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined47 = "True" Then chkAfghanEvac.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined47
+            'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined48 = "True" Then chkUkraine.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined48
+            'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined49 = "True" Then chkUkraineSpon.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined49
+            'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined50 = "True" Then chkUkraineExt.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined50
+            'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined51 = "True" Then chkAsylumAppeal.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined51
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined31 = "True" Then chkrefugee.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined31
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined32 = "True" Then chkTurkish.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined32
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined33 = "True" Then chkAsylumPending.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined33
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined34 = "True" Then chkLA1989.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined34
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined35 = "True" Then chkAsylumRefused.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined35
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined36 = "True" Then chkGrantedSupport.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined36
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined37 = "True" Then chkLA1948.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined37
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined38 = "True" Then chkAsylum.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined38
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined39 = "True" Then chkParent.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined39
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined40 = "True" Then chkDiplomat.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined40
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined41 = "True" Then chkTeacher.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined41
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined42 = "True" Then chkEEA.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined42
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined43 = "True" Then chkAbode.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined43
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined44 = "True" Then chkSocial.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined44
+            If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined45 = "True" Then chkNoAssess.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined45
+            loadAttachments()
+        End If
+
+        ' postcode.Value = WorkingD ata.EnrolmentRequestRow.PostcodeOut & WorkingData.EnrolmentRequestRow.PostcodeIn
+
+        MyBase.OnLoad(e)
+    End Sub
+
+    Private Sub btnContinue_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnContinue.Click
+
+        Me.Page.Validate()
+
+        Session("euro") = selectEuro.SelectedValue
+        Session("dis") = selectLearnDiff.SelectedValue
+        If Session("euro") = "1" Then WorkingData.EnrolmentRequestRow.EuroResidentID = True
+        If Session("euro") = "2" Then WorkingData.EnrolmentRequestRow.EuroResidentID = False
+        If Session("dis") <> "" Then WorkingData.EnrolmentRequestRow.LearningDiffOrDisID = Session("dis")
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined20 = selectPreSettle.SelectedValue
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined21 = selectEducation.SelectedValue
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined22 = chkDiscretionaryRemain.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined23 = chkExceptional.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined24 = chkIndefinite.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined25 = chkAfghan.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined26 = chkHumanitarian.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined27 = chkOutside.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined28 = chkhusband.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined29 = chkSection67.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined30 = chkCalais.Checked
+        'WorkingData.EnrolmentRequestRow.StudentDetailUserDefined46 = chkAfghanPitting.Checked
+        'WorkingData.EnrolmentRequestRow.StudentDetailUserDefined47 = chkAfghanEvac.Checked
+        'WorkingData.EnrolmentRequestRow.StudentDetailUserDefined48 = chkUkraine.Checked
+        'WorkingData.EnrolmentRequestRow.StudentDetailUserDefined49 = chkUkraineSpon.Checked
+        'WorkingData.EnrolmentRequestRow.StudentDetailUserDefined50 = chkUkraineExt.Checked
+        'WorkingData.EnrolmentRequestRow.StudentDetailUserDefined51 = chkAsylumAppeal.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined31 = chkrefugee.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined32 = chkTurkish.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined33 = chkAsylumPending.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined34 = chkLA1989.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined35 = chkAsylumRefused.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined36 = chkGrantedSupport.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined37 = chkLA1948.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined38 = chkAsylum.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined39 = chkParent.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined40 = chkDiplomat.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined41 = chkTeacher.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined42 = chkEEA.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined43 = chkAbode.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined44 = chkSocial.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined45 = chkNoAssess.Checked
+        If Me.Page.IsValid Then
+
+        End If
+
+    End Sub
+    Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
+
+        Me.Page.Validate()
+
+        Session("euro") = selectEuro.SelectedValue
+        Session("dis") = selectLearnDiff.SelectedValue
+        If Session("euro") = "1" Then WorkingData.EnrolmentRequestRow.EuroResidentID = True
+        If Session("euro") = "2" Then WorkingData.EnrolmentRequestRow.EuroResidentID = False
+        If Session("dis") <> "" Then WorkingData.EnrolmentRequestRow.LearningDiffOrDisID = Session("dis")
+
+        If Me.Page.IsValid Then
+
+        End If
+
+    End Sub
+
+    Public Overrides Sub ValidateControl()
+        'Response.Write(selectEuro.SelectedValue)
+        If WorkingData.EnrolmentRequestRow.LearningDiffOrDisID = "" Or selectLearnDiff.SelectedValue = "" Then
+            Dim v As New CustomValidator
+            v.ErrorMessage = "Please answer the question 'Do you consider yourself to have a long term disability, health problem or any learning difficulties?'"
+            v.IsValid = False
+            Me.Page.Validators.Add(v)
+        End If
+        If selectLearnDiff.SelectedValue = "1" And CType("" & WorkingData.EnrolmentRequestRow.DisabilityCategory1ID, String) = "" Then
+            Dim v As New CustomValidator
+            v.ErrorMessage = "Please provide a primary learning / disabilities' "
+            v.IsValid = False
+            Me.Page.Validators.Add(v)
+        End If
+
+        If selectEuro.SelectedValue = "" Then
+            Dim v As New CustomValidator
+            v.ErrorMessage = "Are you a UK national and have you been ordinarily resident in the UK or EEA for at least the previous three years"
+            'rdoEuro.CssClass = "error"
+            v.IsValid = False
+            Me.Page.Validators.Add(v)
+        End If
+
+        If selectPreSettle.SelectedValue = "" Then
+            Dim v As New CustomValidator
+            v.ErrorMessage = "Are you a non-UK national, have permission to live in the UK for purposes other than education only, have obtained pre-settled/settled status under the EU settlement scheme, and have been ordinarily resident in the UK (or Ireland if an Irish national) for at least the previous three years?"
+            ' presettle.CssClass = "error"
+            v.IsValid = False
+            Me.Page.Validators.Add(v)
+        End If
+
+        If selectEducation.SelectedValue = "" Then
+            Dim v As New CustomValidator
+            v.ErrorMessage = " Are you an EEA national (non-Irish), have obtained pre-settled/settled status under the EU settlement scheme, and have lived continuously in the EEA or UK for at least the previous three years?"
+            'rdoEuro.CssClass = "error"
+            v.IsValid = False
+            Me.Page.Validators.Add(v)
+        End If
+
+        If selectEducation.SelectedValue = "2" And selectPreSettle.SelectedValue = "2" And selectEuro.SelectedValue = "2" Then
+            'is there something in section 1 of asessment
+            If chkDiscretionaryRemain.Checked = False And
+                chkExceptional.Checked = False And
+                chkIndefinite.Checked = False And
+                chkAfghan.Checked = False And
+                chkHumanitarian.Checked = False And
+                chkOutside.Checked = False And
+                chkhusband.Checked = False And
+                chkSection67.Checked = False And
+                chkCalais.Checked = False And
+                chkAfghanPitting.Checked = False And
+                chkAfghanEvac.Checked = False And
+                chkUkraine.Checked = False And
+                chkUkraineSpon.Checked = False And
+                chkUkraineExt.Checked = False And
+                chkAsylumAppeal.Checked = False And
+                chkrefugee.Checked = False And
+                chkTurkish.Checked = False And
+                chkAsylumPending.Checked = False And
+                chkLA1989.Checked = False And
+                chkAsylumRefused.Checked = False And
+                chkGrantedSupport.Checked = False And
+                chkLA1948.Checked = False And
+                chkAsylum.Checked = False And
+                chkParent.Checked = False And
+                chkDiplomat.Checked = False And
+                chkTeacher.Checked = False And
+                chkEEA.Checked = False And
+                chkAbode.Checked = False And
+                chkSocial.Checked = False And
+                chkNoAssess.Checked = False Then
+                Dim v As New CustomValidator
+                v.ErrorMessage = " You must provde provide a response the Section 1 OR Section 2 of the Eligibility Assessment questions"
+                'rdoEuro.CssClass = "error"
+                v.IsValid = False
+                Me.Page.Validators.Add(v)
+                'is there something in section 2
+            End If
+        End If
+
+            MyBase.ValidateControl()
+    End Sub
+
+
+    Public Overrides Sub RenderControl(writer As HtmlTextWriter)
+        ' Move UK to top of Nationality Drop Down
+        Dim ctlNationality As DropDownList = TryCast(fldNationalityID.InternalFieldControl, DropDownList)
+        Dim ctlResidence As DropDownList = TryCast(StudentEnrolmentField20.InternalFieldControl, DropDownList)
+        Dim ctlEthnicity As DropDownList = TryCast(StudentEnrolmentField3.InternalFieldControl, DropDownList)
+
+        Dim itemGB = ctlNationality.Items.FindByValue("GB") ' United Kingdom
+        Dim itemXF = ctlResidence.Items.FindByValue("XF") ' UK
+        Dim ItemEng = ctlEthnicity.Items.FindByValue("31")
+
+        ctlEthnicity.Items.Remove(ItemEng)
+        ctlEthnicity.Items.Insert(1, ItemEng)
+
+        ctlResidence.Items.Remove(itemXF)
+        ctlResidence.Items.Insert(1, itemXF)
+
+
+        ctlNationality.Items.Remove(itemGB)
+        ctlNationality.Items.Insert(1, itemGB)
+
+        MyBase.RenderControl(writer)
+
+    End Sub
+
+    Private Property _lastAttachmentID() As Integer
+        Get
+            Return CInt(HttpContext.Current.Session("LastAttachmentID"))
+        End Get
+        Set(ByVal value As Integer)
+            HttpContext.Current.Session("LastAttachmentID") = value
+        End Set
+    End Property
+
+    Protected Sub rptAttachments_ItemCommand(source As Object, e As RepeaterCommandEventArgs)
+        If (e.CommandName = "RemoveAttachment") Then
+            Dim attachmentID = CCCDataTypeConverter.Convert(Of Integer)(e.CommandArgument)
+            Dim rowToDelete = WorkingData.EnrolmentRequestAttachments.FindByAttachmentID(attachmentID)
+            If (rowToDelete IsNot Nothing) Then
+                WorkingData.EnrolmentRequestAttachments.RemoveRow(rowToDelete)
+                loadAttachments()
+            End If
+        End If
+    End Sub
+
+
+    Private Sub loadAttachments()
+        rptAttachments.DataSource = WorkingData.EnrolmentRequestAttachments
+        rptAttachments.DataBind()
+        If (WorkingData.EnrolmentRequestAttachments.Rows.Count = 0) Then
+            trNoItems.Visible = True
+        Else
+            trNoItems.Visible = False
+        End If
+    End Sub
+
+    Private Sub btnUpload_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpload.Click
+        trNoItems.Visible = False
+        Page.MaintainScrollPositionOnPostBack = True
+        Me.Page.Validate()
+
+        ''Following line is important to perform validations on File Upload control based on setup done on control.
+        Me.fuAttachment.ValidateFile()
+
+        If Not Me.Page.IsValid Then
+            Return
+        End If
+
+
+        Dim rowAttachment = WorkingData.EnrolmentRequestAttachments.NewRow
+        _lastAttachmentID -= 1
+        With rowAttachment
+            .AttachmentID = _lastAttachmentID
+            .TypeOfEvidence = (ddlTypeOfEvidence.SelectedValue & System.DateTime.Now)
+            '    .Notes = txtNotes.Text.Trim
+            .Attachment = fuAttachment.FileBytes
+            .FileName = fuAttachment.FileName
+            .Size = fuAttachment.FileBytes.Length
+            If CCCAttachmentThumbnailGenerator.FilenameIndicatesFileIsCompatibleImage(fuAttachment.FileName) Then
+                Try
+                    .ImageThumb = CCCAttachmentThumbnailGenerator.CreateThumbnailAsByteArray(.Attachment, 96)
+                Catch ex As Exception
+                    ' Cannot create thumb nail- ignore error
+                    .ImageThumb = Nothing ' No thumb-nail
+                End Try
+            End If
+            .CreatedDate = DateTime.Now
+        End With
+        WorkingData.EnrolmentRequestAttachments.AddRow(rowAttachment)
+        ''Reload attachments to refresh the grid and clear the controls for user to do fresh entry again.
+        loadAttachments()
+        ' txtNotes.Text = Nothing
+        ddlTypeOfEvidence.SelectedIndex = 0
+    End Sub
+End Class
+
+

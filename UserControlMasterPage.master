@@ -1,0 +1,107 @@
+<%@ Master Language="VB" CodeFile="UserControlMasterPage.master.vb" Inherits="UserControlMasterPage" %>
+
+<%@ Register Assembly="PSWebEnrolmentKit" Namespace="CompassCC.ProSolution.PSWebEnrolmentKit"
+    TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server" id="header">
+
+</head>
+
+ 
+
+<body id="body" runat="server">
+         <form id="form1" runat="server">
+        <nav class="navbar navbar-inverse">
+          
+     <img class="img-fluid TopLogo" src="_images/lcg-lockup-on-black.png" alt="Learning Curve Group Logo" height="45" />
+<%--    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Enrolment</a>
+    </div>--%>
+
+<%--                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+
+                      <div id="regLoggedIn" class="nav navbar-nav navbar-right" runat="server" ClientIDMode="Static">
+                        <ul class="nav navbar-nav">                          
+                            <li>
+                                <p runat="server" id="username" style="color: #e6e6e6; padding-top: 15px" clientidmode="Static" />
+                            </li>
+                            <li id="liLastLoginInfo">
+                                <a id="lnkLastLoginInfo" runat="server" clientidmode="Static" data-toggle="tooltip" data-width="150px" data-placement="bottom" data-html="true" title="Tooltip on top" href="javascript:void(0)" class="lastlogin-info">
+                                <span class="glyphicon glyphicon-info-sign"></span>
+                                </a>
+                            </li>
+                            <li><asp:HyperLink ID="lnkAccount" Visible="false" runat="server" ClientIDMode="Static" NavigateUrl="webenrolment.aspx?page=~/account/ccc/UserAccount.ascx">My Account</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="lnkLogout" runat="server" ClientIDMode="Static" NavigateUrl="webenrolment.aspx?page=~/account/ccc/Logout.ascx">Log out</asp:HyperLink></li>
+                        </ul>
+                    </div>
+					 <div id="regLinks" class="nav navbar-nav navbar-right" runat="server" ClientIDMode="Static">
+                        <ul class="nav navbar-nav">
+                          <li>
+                                <asp:HyperLink ID="lnkLogin" runat="server" ClientIDMode="Static" NavigateUrl="webenrolment.aspx?page=~/account/ccc/Login.ascx" Style="color: #999; padding: 15px; height: 50px">Login</asp:HyperLink>
+
+                            </li>
+                        </ul>
+                    </div>
+                  </div>--%>
+
+<a class="basketlink" href="webenrolment.aspx?page=~/webcontrols/checkout.ascx">Basket</a>
+            </nav>
+
+        <div class="container">
+       <%--     <div class= "row">
+                      <asp:GridView ID="OfferginGridView" runat="server" AutoGenerateColumns="false" CssClass="courselistgrid table table-striped table-bordered text-center"
+            DataKeyNames="OfferingID" CellSpacing="-1" BorderStyle="None" GridLines="none">
+            <Columns>
+                <asp:BoundField DataField="Name" HeaderText="Course Name - 1st CHOICE ONLY" ItemStyle-HorizontalAlign="left"/>
+           <asp:BoundField DataField="MoA" HeaderText="Full time/Part time"  ItemStyle-HorizontalAlign="left"/>
+                <asp:BoundField DataField="OfferingType" HeaderText="Offering Type" Visible="true"/>
+                 <asp:BoundField DataField="EnrolmentType" HeaderText="Enrolment Type" Visible="true"/>
+                <asp:BoundField DataField="formatedStartDate" HeaderText="**Start"  HtmlEncode="False"  ItemStyle-HorizontalAlign="left"/>
+               <asp:BoundField DataField="Level" HeaderText="Level"  Visible="true"/>
+                <asp:BoundField DataField="SiteDescription" HeaderText="Site"  ItemStyle-HorizontalAlign="left"/>
+                <asp:BoundField DataField="TotalFeeAmount" HeaderText="*Yearly Fees" DataFormatString="{0:c}"  Visible="true" />
+                 <asp:BoundField DataField="CanLoan" HeaderText="Can apply for Loans"  Visible="true"/>
+                 <asp:BoundField DataField="offeringid" HeaderText="offeringid"  Visible="false" />
+                <asp:BoundField DataField="FL2_entitlement" HeaderText="FL2"  Visible="true"/>
+                <asp:BoundField DataField="FL3_entitlement" HeaderText="FL3"  Visible="true"/>
+                   <asp:BoundField DataField="fundingid" HeaderText="Fund"  Visible="true"/>
+                <asp:BoundField DataField="funding2id" HeaderText="Fund2"  Visible="true"/>
+                 <asp:BoundField DataField="MatrixFunded" HeaderText="Matrix"  Visible="true"/>
+                 <asp:BoundField DataField="EM_entitlement" HeaderText="EM"  Visible="true"/>
+                 <asp:BoundField DataField="LocalFlexibility_entitlement" HeaderText="LocalF"  Visible="true"/>
+                <asp:BoundField DataField="Esol_entitlement" HeaderText="Esol"  Visible="true"/>
+                <asp:BoundField DataField="DigitalSkills_entitlement" HeaderText="Digital"  Visible="true"/>
+                 <asp:BoundField DataField="college" HeaderText="College"  Visible="true"/>
+            </Columns>
+        </asp:GridView>
+                <p>* Fees subject to change at any time</p>
+                 <p>** The actual day to attend College may differ - you will be notified in the welcome email.</p>
+       <br/>
+            </div>--%>
+<%--            <div class= "row">
+                 <asp:Label runat="server" ID="lblMasterAge" Visible="true"></asp:Label>
+                </div>
+                        <div class = "row">
+                 <asp:Label runat="server" ID="lblMasterAgeCourse" Visible="true"></asp:Label>
+                </div>--%>
+            <div class="body-content" id="content">                        
+                <asp:ContentPlaceHolder ID="MainContentPlaceholder" runat="server">
+                </asp:ContentPlaceHolder>
+ 
+            </div>
+        </div>
+  
+
+
+    </form>
+
+   </body></html>

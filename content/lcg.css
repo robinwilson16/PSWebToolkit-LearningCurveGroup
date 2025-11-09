@@ -1,0 +1,51 @@
+﻿.TopLogo {
+    max-height: 45px;
+}
+
+.bd-callout-lcg {
+    border-left-color: #4e2a60
+}
+
+.bd-callout-grey1 {
+    background-color: #F5F5F5;
+}
+
+.bd-callout-grey2 {
+    background-color: #CCCCCC;
+}
+
+.btn-lcg {
+    background-color: #4e2a60;
+    color: #FFFFFF;
+}
+
+.btn-lcg:link,
+.btn-lcg:active,
+.btn-lcg:visited {
+    background-color: #4e2a60;
+    color: #FFFFFF;
+    border-color: #4e2a60;
+}
+
+.btn-lcg:hover {
+    background-color: #f2ebfb;
+    color: #4e2a60;
+}
+
+.ScrollPanel {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 10px;
+    max-height: 780px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.navbar ol {
+    margin-bottom: 0;
+}
+
+.resultspanel {
+    margin-right: 0px;
+    padding-right: 0px;
+}

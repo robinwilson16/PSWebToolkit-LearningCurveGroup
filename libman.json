@@ -1,0 +1,35 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.7.1",
+      "destination": "Scripts/jquery/"
+    },
+    {
+      "library": "jqueryui@1.14.1",
+      "destination": "Scripts/jquery-ui/"
+    },
+    {
+      "library": "twitter-bootstrap@5.3.8",
+      "destination": "Scripts/bootstrap/"
+    },
+    {
+      "library": "font-awesome@7.0.1",
+      "destination": "Scripts/font-awesome/"
+    },
+    {
+      "library": "marked@16.3.0",
+      "destination": "Scripts/marked/"
+    },
+    {
+      "library": "bs5-lightbox@1.8.5",
+      "destination": "Scripts/bs5-lightbox/"
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "getaddress-autocomplete-native@2.2.1",
+      "destination": "Scripts/get-address/"
+    }
+  ]
+}

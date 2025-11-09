@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "W:\\PSWebEnrolment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\searchnew.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\searchnew.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\searchnew.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\searchnew.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\content\\lcg.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:content\\lcg.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\usercontrolmasterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:usercontrolmasterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\usercontrolmasterpage.master.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:usercontrolmasterpage.master.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\content\\callout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:content\\callout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserControlMasterPage.master",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\UserControlMasterPage.master",
+              "RelativeDocumentMoniker": "UserControlMasterPage.master",
+              "ToolTip": "W:\\PSWebEnrolment\\UserControlMasterPage.master",
+              "RelativeToolTip": "UserControlMasterPage.master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-09T15:32:41.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "searchnew.ascx.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\searchnew.ascx.vb",
+              "RelativeDocumentMoniker": "webcontrols\\searchnew.ascx.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\searchnew.ascx.vb",
+              "RelativeToolTip": "webcontrols\\searchnew.ascx.vb",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAnwAQBAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T16:11:08.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserControlMasterPage.master.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\UserControlMasterPage.master.vb",
+              "RelativeDocumentMoniker": "UserControlMasterPage.master.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\UserControlMasterPage.master.vb",
+              "RelativeToolTip": "UserControlMasterPage.master.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKMCAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T15:32:09.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "callout.css",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\content\\callout.css",
+              "RelativeDocumentMoniker": "content\\callout.css",
+              "ToolTip": "W:\\PSWebEnrolment\\content\\callout.css",
+              "RelativeToolTip": "content\\callout.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-09T15:14:40.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "searchnew.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\searchnew.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\searchnew.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\searchnew.ascx",
+              "RelativeToolTip": "webcontrols\\searchnew.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-09T15:02:41.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "lcg.css",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\content\\lcg.css",
+              "RelativeDocumentMoniker": "content\\lcg.css",
+              "ToolTip": "W:\\PSWebEnrolment\\content\\lcg.css",
+              "RelativeToolTip": "content\\lcg.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-09T15:02:29.928Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
