@@ -1,18 +1,24 @@
 ﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="checkout_employment.ascx.vb" Inherits="webcontrols_checkout_employment" %>
 <%@ Register Assembly="PSWebEnrolmentKit" Namespace="CompassCC.ProSolution.PSWebEnrolmentKit"
     TagPrefix="cc1" %>
-<div class="progress" style="height: 20px;">
-  <div class="progress-barlcg" role="progressbar" style="width: 50%;" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-3 mb-3 navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="default.aspx"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/coursedisplay.ascx&CourseInformationID=<%=CourseInformationID %>"><i class="fa-solid fa-scroll"></i> Course Details</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/courseenrol.ascx&OfferingID=<%=OfferingID %>"><i class="fa-solid fa-circle-info"></i> Information</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments.ascx"><i class="fa-solid fa-user"></i> Personal Details</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx"><i class="fa-solid fa-people-group"></i> Guardian / Emergency</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx"><i class="fa-solid fa-earth-americas"></i> Further Details</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-city"></i> Employment</li>
+        </ol>
+    </div>
+</nav>
+
+<div class="progress mb-3" role="progressbar" aria-label="Online Enrolment Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+  <div class="progress-barlcg progress-bar-striped progress-bar-animated" style="width: 50%">50%</div>
 </div>
-                <ol class="breadcrumb">
-                    <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments.ascx">Personal Details</a></li>
-                    <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx">Guardian / Emergency</a></li>                 
-                    <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx">Further Details</a></li>
-                    <li><strong>Employment</strong></li>
-                    <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_quals_on_entry.ascx">Qualifications</a></li>
-                    <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments3.ascx">Course Details</a></li>
-                    <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments4.ascx">Initial IAG</a></li>
-                    </ol>
 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger" ForeColor="" />
 
@@ -108,8 +114,8 @@
  
        </script>
 
-    <div class="container">
-            <h2>Employment Status</h2>
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Employment Status</h4>
 
             <div class="row">
                 <div class="col-sm-6 columns form-group">            
@@ -119,9 +125,7 @@
 </button>
           </div>
         </div>
-   </div>
 
-<div class="container">
       <div class="row">
 
          <%-- Example of field pulled from cc1:StudentEmploymentHistory (Auto Maps to ProSol field) --%>
@@ -157,10 +161,10 @@
              </asp:DropDownList>
           </div>
       </div>
-    </div>
+
     <!-- START YES Employed - These are all related to YES employed -->
 
-<div class="container">
+
       <div class="row"  id="divEmploymentLength" style="display:none">
           <div class="col-sm-4 columns form-group"> 
          <span class="textfieldlabelrequired">Are you self Employed?</span>
@@ -224,10 +228,7 @@
            CustomCaption="* Email"  CssClass="textfieldlabelrequired"/>
       </div>
          </div>
-</div>
-  
-     
-<div class="container">
+
    <div class="row"  id="divUnEmploymentLength" style="display:none">
         <div class="col-sm-3 columns form-group"> 
               <span class="textfieldlabelrequired">* Length of time unemployed</span>
@@ -241,6 +242,11 @@
              </asp:DropDownList>
           </div>
       </div>
+    </div>
+  
+     
+<div class="bd-callout bd-callout-lcg bd-callout-grey2 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Benefits</h4>
 
         <div class="row">
                        <div class="col-sm-3 columns form-group"> 
@@ -296,7 +302,7 @@
     </div>
 </div>
         
-<div class="container">
+<div class="container mt-4">
         <div class="panel panel-primarylcg" id="divBeneifts">
          <h2>Benefit/Low Wage Upload (Evidence must be dated within 3 months)</h2>
          <hr /><strong>Upload area:</strong><br />
@@ -377,9 +383,23 @@
   <asp:button runat="server" id="btnNoPreviousEmployment" cssClass="show_hide btn btn-primary" text="No previous employment" ToolTip="Click to remove all the items listed below (And hide the list)"></asp:button>
     <br />
     -->
- <cc1:CCCButton ID="btnBack" runat="server" Text="Back" ImageResource="btnBack" LinkResource="checkout_enrolments2_aspx" />
-<cc1:CCCButton ID="btnContinue" runat="server" Text="Continue" ImageResource="btnContinue"  LinkResource="checkout_quals_on_entry_aspx" CausesValidation="true" />
-<br />
+
+<div class="alert alert-secondary" role="alert">
+    <div class="row gap-3">
+        <div class="col-md">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-secondary btn-lg BackButton"><i class="fa-solid fa-circle-chevron-left"></i> Back</button>
+                <cc1:CCCButton ID="btnBack" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Back" ImageResource="btnBack" CausesValidation="false" LinkResource="checkout_enrolments2_aspx" />
+            </span>
+        </div>
+        <div class="col-md text-end">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-primary btn-lcg btn-lg NextButton">Next <i class="fa-solid fa-circle-chevron-right"></i></button>
+                <cc1:CCCButton ID="btnContinue" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Continue" ImageResource="btnContinue" CausesValidation="true" EnableEnterKey="true" SaveForLater="true" SaveForLaterIn="Request" LinkResource="checkout_quals_on_entry_aspx" />
+            </span>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript">
            $(document).ready(function () {

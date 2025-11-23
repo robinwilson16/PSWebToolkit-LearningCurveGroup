@@ -5,12 +5,10 @@
 <%@ Register Namespace="CustomControl"
     TagPrefix="cc2" %>
 
-<br />
-<br />
-<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="navbar bg-body-tertiary">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-3 mb-3 navbar bg-body-tertiary">
     <div class="container-fluid">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Home</li>
+            <li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-house"></i> Home</li>
         </ol>
     </div>
 </nav>

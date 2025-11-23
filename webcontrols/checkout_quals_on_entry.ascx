@@ -35,26 +35,30 @@
     })
 
 </script>
-<div class="progress" style="height: 20px;">
-  <div class="progress-barlcg" role="progressbar" style="width: 62.5%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-3 mb-3 navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="default.aspx"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/coursedisplay.ascx&CourseInformationID=<%=CourseInformationID %>"><i class="fa-solid fa-scroll"></i> Course Details</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/courseenrol.ascx&OfferingID=<%=OfferingID %>"><i class="fa-solid fa-circle-info"></i> Information</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments.ascx"><i class="fa-solid fa-user"></i> Personal Details</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx"><i class="fa-solid fa-people-group"></i> Guardian / Emergency</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx"><i class="fa-solid fa-earth-americas"></i> Further Details</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_employment.ascx"><i class="fa-solid fa-city"></i> Employment</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-award"></i> Qualifications</li>
+        </ol>
+    </div>
+</nav>
+
+<div class="progress mb-3" role="progressbar" aria-label="Online Enrolment Progress" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+  <div class="progress-barlcg progress-bar-striped progress-bar-animated" style="width: 60%">60%</div>
 </div>
-  <ol class="breadcrumb">
-                    <li>Personal Details</li>
-                    <li>Guardian / Emergency</li>                  
-                    <li>Further Details</li>
-                    <li>Employment</li>
-                    <li><strong>Qualifications</strong></li>
-                    <li>Course Details</li>
-                    <li>Initial IAG</li>
-                    </ol>
 
 <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger"  />
-<div class="container">
-    <div class="row">
-      <div class="col-sm-12 columns form-group"> 
-          <h2>Qualifications</h2>
-          </div>
-  </div>
+
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Current Courses and Highest Qualifications</h4>
 
       <div class="row">
         <div class="col-sm-12 columns form-group"> 
@@ -179,13 +183,11 @@
     <tr><td colspan="3"><span id="hideItem2"><a class="btn btn-secondary" role="button">Hide table</a></span></td></tr>
     </table>
 </div>
-     <br /><br />
 
-<div class="container">
 
-<div id="divYourQuals" runat="server">
+<div class="bd-callout bd-callout-lcg bd-callout-grey2 mb-3" id="divYourQuals" runat="server">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Your Qualifications</h4>
    
-     <strong>Your qualifications</strong>
    <p>If you have not yet taken your exams or recevied your results, please provide us with your predicted grades. 
                 Please include information on all qualifications. ie GCSE, NVQs, BTEC, Diplomas, A levels or any other subjects you may have studied. </p> 
                 <p>
@@ -200,15 +202,17 @@
         <%--<tr><th>Qualification</th><th>Subject (if not in list)</th><th>Predicted Grade</th><th>Grade</th><th>Date Awarded</th></tr>--%>
 
         </asp:table>
-    <asp:button runat="server" id="btnAdd" cssClass="btn btn-success" text="Add Row"></asp:button>
+    <asp:button runat="server" id="btnAdd" cssClass="btn btn-success" text="Add Row" CausesValidation="false"></asp:button>
 
         </div>
   </div>
-    <br /><br />
-    <p><strong>Conditionality Check for English and Maths</strong></p>
+
+
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3" id="div1" runat="server">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Conditionality Check for English and Maths</h4>
+
     <p>Do you have functional skills L2 in English or an alternative English qualification:</p>
-</div>
-<div class="container">
+
   <div class="row">
       <div class="col-sm-4 columns form-group"> 
            <cc1:StudentEnrolmentField id="fldGCSEEngCoF" runat="server" customcaption="* GCSE English CoF" CustomFieldType="Lookup" labelwidth="300" StudentEnrolmentFieldType="StudentDetailUserDefined46"></cc1:StudentEnrolmentField>
@@ -238,11 +242,22 @@
 </div>
 
 
- <cc1:CCCButton ID="btnBack" runat="server" Text="Back" ImageResource="btnBack" LinkResource="checkout_employment_aspx" />
-<cc1:CCCButton ID="btnContinue" runat="server" Text="Continue" ImageResource="btnContinue" LinkResource="checkout_enrolments3_aspx" CausesValidation="true" EnableEnterKey="true" />
-<br />
-
-
+<div class="alert alert-secondary" role="alert">
+    <div class="row gap-3">
+        <div class="col-md">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-secondary btn-lg BackButton"><i class="fa-solid fa-circle-chevron-left"></i> Back</button>
+                <cc1:CCCButton ID="btnBack" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Back" ImageResource="btnBack" CausesValidation="false" LinkResource="checkout_employment_aspx" />
+            </span>
+        </div>
+        <div class="col-md text-end">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-primary btn-lcg btn-lg NextButton">Next <i class="fa-solid fa-circle-chevron-right"></i></button>
+                <cc1:CCCButton ID="btnContinue" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Continue" ImageResource="btnContinue" CausesValidation="true" EnableEnterKey="true" SaveForLater="true" SaveForLaterIn="Request" LinkResource="checkout_enrolments3_aspx" />
+            </span>
+        </div>
+    </div>
+</div>
     
    
         <asp:HiddenField  id="NoQuals" value="false" runat="server"  ClientIDMode="static" />

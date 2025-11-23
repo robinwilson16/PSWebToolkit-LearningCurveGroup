@@ -11,11 +11,18 @@ Imports System.Data.SqlClient
 Partial Class webcontrols_checkout_parent_guardian
     Inherits CheckoutBaseControl
 
+    Public CourseInformationID As Integer
+
+    Public ReadOnly Property OfferingID() As Integer
+        Get
+            Return WorkingData.ShoppingCart.Items(0).OfferingID
+        End Get
+    End Property
 
     Protected Overrides Sub OnLoad(e As EventArgs)
         '  Response.Write(WorkingData.EnrolmentRequestRow.EuroResidentID)
 
-
+        CourseInformationID = CourseInformationHelper.GetCourseInformationID(Me.Session)
 
         If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined1 < 18 Then
             parent1panel.Visible = True

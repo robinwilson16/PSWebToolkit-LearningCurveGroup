@@ -29,38 +29,34 @@ $(function () {
  --> <cc1:CourseEnrolAction ID="CourseEnrolAction" runat="server" Visible="false"/>
    
    <cc1:OfferingFeesDisplayAll runat="server" Visible="false" />
-<!--
-                <ol class="breadcrumb">
-                    <li>Personal Details</li>
-                    <li id="linkParent" runat="server" CausesValidation="true"><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx">Guardian / Emergency</a></li>                   
-                    <li id="linkFurther" runat="server" ><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments2.ascx">Further Details</a></li>
-                    <li id="linkQuals" runat="server" ><a id="aQuals" runat="server" href="webenrolment.aspx?page=~/webcontrols/checkout_quals_on_entry.ascx">Qualifications</a></li>
-                     <li id="linkAttach" runat="server" ><a href="webenrolment.aspx?page=~/webcontrols/checkout_attachments.ascx">Attachments</a></li>
-                     <li id="linkDeclare" runat="server"><a href="webenrolment.aspx?page=~/webcontrols/checkout_dataprotection.ascx">Declarations</a></li>
-                    </ol>
-    -->
-<div class="progress" style="height: 20px;">
-  <div class="progress-barlcg" role="progressbar" style="width: 12.5%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-3 mb-3 navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="default.aspx"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/coursedisplay.ascx&CourseInformationID=<%=CourseInformationID %>"><i class="fa-solid fa-scroll"></i> Course Details</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/courseenrol.ascx&OfferingID=<%=OfferingID %>"><i class="fa-solid fa-circle-info"></i> Information</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-user"></i> Personal Details</li>
+        </ol>
+    </div>
+</nav>
+
+
+<div class="progress mb-3" role="progressbar" aria-label="Online Enrolment Progress" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+  <div class="progress-barlcg progress-bar-striped progress-bar-animated" style="width: 20%">20%</div>
 </div>
-                <ol class="breadcrumb">
-                    <li><strong>Personal Details</strong></li>
-                    <li>Guardian / Emergency</li>                  
-                    <li>Further Details</li>
-                    <li>Employment</li>
-                    <li>Qualifications</li>
-                    <li>Course Details</li>
-                    <li>Initial IAG</li>
-                    </ol>
 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger" ForeColor="" />
 
     
 
 
-<div class="container">
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Personal Details</h4>
+
    <div class="row">
       <div class="col-sm-12 columns form-group"> 
-        <h2>Personal Details</h2><p>Please note all fields marked with <strong>*</strong> are required. </p>
+        <p>Please note all fields marked with <strong>*</strong> are required. </p>
           </div>
   </div>
   <div class="row" id="divRefno" runat="server" visible="false">
@@ -84,7 +80,7 @@ $(function () {
    </div>
   <div class="row">
       <div class="col-sm-6 columns form-group"> 
-          <cc1:StudentEnrolmentField id="datepicker" runat="server" IsRequired="true" StudentEnrolmentFieldType="DateOfBirth"  CustomCaption="* Date of birth"/>
+          <cc1:StudentEnrolmentField id="datepicker" runat="server" IsRequired="true" StudentEnrolmentFieldType="DateOfBirth"  CustomCaption="* Date of birth" HTML5InputType="date" />
           </div>
       <div class="col-sm-6 columns form-group">            
                  <cc1:StudentEnrolmentField StudentEnrolmentFieldType="Sex" ID="StudentEnrolmentField6" runat="server"  IsRequired="true" CustomCaption="* Legal Sex"/>
@@ -103,12 +99,10 @@ $(function () {
    </div>
 </div>
     -->
-  <div class="row">
-      <div class="col-sm-12 columns form-group"> 
-<h4>Address details</h4>
-            </div>
-   </div>
+</div>
 
+<div class="bd-callout bd-callout-lcg bd-callout-grey2 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Address Details</h4>
 
     <div class="row">
       <div class="col-sm-6 columns form-group"><p>Quickly find your address, enter postcode or partial address below:</p>
@@ -142,6 +136,10 @@ $(function () {
            
     </div>
       </div>
+</div>
+
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Contact Details</h4>
      <div class="row">
        <div class="col-sm-12 columns form-group">  <p><strong>You must provide at least one phone number below:</strong></p>
            </div>
@@ -173,6 +171,10 @@ Hover over me for Mobile format
               <cc1:StudentEnrolmentField StudentEnrolmentFieldType="HouseholdSituation1ID" ID="StudentEnrolmentField33" DefaultValue="99" runat="server" IsRequired="true"  ExcludedIDValues="98" LabelWidth="200" CustomCaption="* Your Household situation" />
           </div>
      </div> -->
+</div>
+
+<div class="bd-callout bd-callout-lcg bd-callout-grey2 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Supporting You</h4>
     <div class="row">
       <div class="col-sm-12 columns form-group"> 
                 <p><strong>Learning Curve Group (LCG) is committed to supporting care leavers and 'looked after children' and therefore encourage candidates from these groups to study with us</strong>, we can also offer support and guidance to individuals from these groups from out student support and welfare teams.At LCG we deem a Care Leaver as any student who has spent 13 weeks or more in the care of the local authority (e.g. foster care or children’s home) between their 14th and 16th birthday, were privately fostered until the age of 16 or who were ‘looked after children’ until they were subject of a Special Guardianship Order.</p>
@@ -198,7 +200,10 @@ Hover over me for Mobile format
           </div>
              </div>
 
+</div>
 
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Criminal Convictions</h4>
 
     <div class="row">
       <div class="col-sm-12 columns form-group"> 
@@ -227,8 +232,20 @@ Hover over me for Mobile format
 
 
 
-      <!--  <cc1:CCCButton id="btnBack" runat="server" Text="Back" ImageResource="btnBack" LinkResource="checkout_aspx"/> -->
-        <cc1:CCCButton ID="btnContinue" runat="server" Text="Continue" ImageResource="btnContinue" LinkResource="checkout_parentguardian_aspx" CausesValidation="true" EnableEnterKey="true" />
 
-
-
+<div class="alert alert-secondary" role="alert">
+    <div class="row gap-3">
+        <div class="col-md">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-secondary btn-lg BackButton"><i class="fa-solid fa-circle-chevron-left"></i> Back</button>
+                <cc1:CCCButton ID="btnBack" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Back" ImageResource="btnBack" CausesValidation="false" />
+            </span>
+        </div>
+        <div class="col-md text-end">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-primary btn-lcg btn-lg NextButton">Next <i class="fa-solid fa-circle-chevron-right"></i></button>
+                <cc1:CCCButton ID="btnContinue" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Continue" ImageResource="btnContinue" CausesValidation="true" EnableEnterKey="true" SaveForLater="true" SaveForLaterIn="Request" LinkResource="checkout_parentguardian_aspx" />
+            </span>
+        </div>
+    </div>
+</div>

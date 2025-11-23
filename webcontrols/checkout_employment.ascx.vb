@@ -4,8 +4,18 @@ Imports CompassCC.CCCSystem.CCCCommon
 Partial Class webcontrols_checkout_employment
     Inherits CheckoutBaseControl
 
+    Public CourseInformationID As Integer
+
+    Public ReadOnly Property OfferingID() As Integer
+        Get
+            Return WorkingData.ShoppingCart.Items(0).OfferingID
+        End Get
+    End Property
+
     Protected Overrides Sub OnLoad(e As EventArgs)
         MyBase.OnLoad(e)
+
+        CourseInformationID = CourseInformationHelper.GetCourseInformationID(Me.Session)
 
         If Not (IsPostBack) Then
 

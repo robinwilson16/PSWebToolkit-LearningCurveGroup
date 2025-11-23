@@ -4,11 +4,19 @@ Imports CompassCC.CCCSystem.CCCCommon
 Partial Class checkout_quals_on_entry
     Inherits CheckoutBaseControl
 
+    Public CourseInformationID As Integer
+
+    Public ReadOnly Property OfferingID() As Integer
+        Get
+            Return WorkingData.ShoppingCart.Items(0).OfferingID
+        End Get
+    End Property
 
     Protected Overrides Sub OnLoad(e As EventArgs)
+        CourseInformationID = CourseInformationHelper.GetCourseInformationID(Me.Session)
 
         'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined12 <> "" Then fldGCSEEngCoF.Value = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined12
-       ' If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined13 <> "" Then fldGCSEEngGrade.Value = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined13
+        ' If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined13 <> "" Then fldGCSEEngGrade.Value = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined13
         'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined14 <> "" Then fldGCSEMathCoF.Value = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined14
         'If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined15 <> "" Then fldGCSEMathGrade.Value = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined15
         If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined19 <> "" Then selectDropDownLearnerExcluded.SelectedValue = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined19
@@ -117,6 +125,7 @@ Partial Class checkout_quals_on_entry
                 ctl5.StudentQualsOnEntryRowNumber = i
                 ctl5.LabelWidth = 0
                 ctl5.CustomFieldType = CCCFieldType.Date
+                ctl5.HTML5InputType = Html5InputType.date
                 cell5.Controls.Add(ctl5)
 
                 row.Cells.AddRange({cell1, cell2, cell3, cell4, cell5})

@@ -37,26 +37,29 @@
                      <li><a href="webenrolment.aspx?page=~/webcontrols/checkout_dataprotection.ascx">Declarations</a></li>
                 </ol>
     -->
-<div class="progress" style="height: 20px;">
-  <div class="progress-barlcg" role="progressbar" style="width: 37.5%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-3 mb-3 navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="default.aspx"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/coursedisplay.ascx&CourseInformationID=<%=CourseInformationID %>"><i class="fa-solid fa-scroll"></i> Course Details</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/courseenrol.ascx&OfferingID=<%=OfferingID %>"><i class="fa-solid fa-circle-info"></i> Information</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_enrolments.ascx"><i class="fa-solid fa-user"></i> Personal Details</a></li>
+            <li class="breadcrumb-item"><a href="webenrolment.aspx?page=~/webcontrols/checkout_parent_guardian.ascx"><i class="fa-solid fa-people-group"></i> Guardian / Emergency</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-earth-americas"></i> Further Details</li>
+        </ol>
+    </div>
+</nav>
+
+<div class="progress mb-3" role="progressbar" aria-label="Online Enrolment Progress" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+  <div class="progress-barlcg progress-bar-striped progress-bar-animated" style="width: 40%">40%</div>
 </div>
-  <ol class="breadcrumb">
-                    <li>Personal Details</li>
-                    <li>Guardian / Emergency</li>
-                    <li><strong>Further Details</strong></li>
-                    <li>Employment</li>
-                    <li>Qualifications</li>
-                    <li>Course Details</li>
-                    <li>Initial IAG</li>
-                    </ol>
 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger" ForeColor="" />
-<div class="container">
-   <div class="row">
-      <div class="col-sm-12 columns form-group"> 
-       <h2>Eligibility</h2>
-          </div>
-  </div>
+
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3" id="div1" runat="server">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Eligibility</h4>
+
         <div class="row">
        <div class="col-sm-6 columns form-group"> 
            <cc1:StudentEnrolmentField StudentEnrolmentFieldType="NationalityID" ID="fldNationalityID" runat="server" IsRequired="true" CustomCaption="* Nationality" />
@@ -117,7 +120,7 @@
        <div class="col-sm-12 columns form-group"> 
                  
             <p><strong>* Do you currently have permission to stay in the UK for at least 12 months?</strong></p>
-              <asp:DropDownList ID="selectUK12months" runat="server" CssC   lass="textfield form-control"  Width="200">
+              <asp:DropDownList ID="selectUK12months" runat="server" CssClass="textfield form-control"  Width="200">
              <asp:ListItem value="">Please select...</asp:ListItem>
              <asp:ListItem value="1">Yes</asp:ListItem>
              <asp:ListItem value="2">No</asp:ListItem>
@@ -346,25 +349,27 @@ Hover over me for Verification Type example
                 <%--<br /><asp:TextBox ID="txtDateTest" runat="server" IsRequired="true"  CustomCaption="* Date Validated" Width="555"></asp:TextBox> --%>
         </div>
     </div>
+</div>
+
+<div class="bd-callout bd-callout-lcg bd-callout-grey2 mb-3" id="div2" runat="server">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Staff Use Only</h4>
 
     <cc1:StudentEnrolmentField StudentEnrolmentFieldType="StudentInternationalDetailUserDefined1" ID="StaffName" runat="server" IsRequired="false"  CustomCaption="Staff Name"></cc1:StudentEnrolmentField><br />
 
-    <cc1:StudentEnrolmentField StudentEnrolmentFieldType="StudentInternationalDetailUserDefined2" ID="DateValidated" runat="server" IsRequired="false"  CustomCaption="Date Validated"></cc1:StudentEnrolmentField><br />
+    <cc1:StudentEnrolmentField StudentEnrolmentFieldType="StudentInternationalDetailUserDefined2" ID="DateValidated" runat="server" IsRequired="false"  CustomCaption="Date Validated" HTML5InputType="Date"></cc1:StudentEnrolmentField><br />
 
     <cc1:StudentEnrolmentField StudentEnrolmentFieldType="CASID" ID="CASID" runat="server" IsRequired="false"  CustomCaption="Document Type"></cc1:StudentEnrolmentField><br />
    
     
     <cc1:StudentEnrolmentField StudentEnrolmentFieldType="PassportNumber" ID="DocumentNumberReference" runat="server" IsRequired="false" CustomCaption="Document Number / Reference" LabelWidth="1000"></cc1:StudentEnrolmentField><br />
 
-    <cc1:StudentEnrolmentField StudentEnrolmentFieldType="PassportIssueDate" ID="ValidFrom" runat="server" IsRequired="false"  CustomCaption="Valid From"></cc1:StudentEnrolmentField><br />
+    <cc1:StudentEnrolmentField StudentEnrolmentFieldType="PassportIssueDate" ID="ValidFrom" runat="server" IsRequired="false"  CustomCaption="Valid From" HTML5InputType="Date"></cc1:StudentEnrolmentField><br />
 
-    <cc1:StudentEnrolmentField StudentEnrolmentFieldType="PassportExpiryDate" ID="ValidTo" runat="server" IsRequired="false"  CustomCaption="Valid To"></cc1:StudentEnrolmentField><br />
+    <cc1:StudentEnrolmentField StudentEnrolmentFieldType="PassportExpiryDate" ID="ValidTo" runat="server" IsRequired="false"  CustomCaption="Valid To" HTML5InputType="Date"></cc1:StudentEnrolmentField><br />
 
-   <div class="row">
-      <div class="col-sm-12 columns form-group">
-       <h2>Equal Opportunities</h2>
-          </div>
-  </div>
+</div>
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Equal Opportunities</h4>
 
       <div class="row">
           <div class="col-sm-6 columns form-group"> 
@@ -405,16 +410,14 @@ Hover over me for Verification Type example
     <div class="row">
         <div class="col-md-3">
             Type of Evidence
-                            <asp:DropDownList ID="ddlTypeOfEvidence" runat="server" CssClass="txtnotes" Width="250">
+                            <asp:DropDownList ID="ddlTypeOfEvidence" runat="server" CssClass="textfield form-control txtnotes" Width="250">
                                 <asp:ListItem Text="Select" Value=""></asp:ListItem>
                                 <asp:ListItem Text="British/Irish Passport" Value="British/Irish Passport"></asp:ListItem>
                                 <asp:ListItem Text="British Driving Licence" Value="British Driving Licence"></asp:ListItem>
                                 <asp:ListItem Text="British/Irish Birth Certificates" Value="British/Irish Birth Certificates"></asp:ListItem>
                                 <asp:ListItem Text="PLR (16-18 YO)" Value="PLR (16-18 YO)"></asp:ListItem>
                                 <asp:ListItem Text="Biometric Residence Permit (BRP)" Value="Biometric Residence Permit (BRP)"></asp:ListItem>
-                                <asp:ListItem Text="Letter from UK Visa or Immigration service AND/OR evidence of your relationship to the
-person who has been granted this status" Value="Letter from UK Visa or Immigration service AND/OR evidence of your relationship to the
-person who has been granted this status"></asp:ListItem>
+                                <asp:ListItem Text="Letter from UK Visa or Immigration service AND/OR evidence of your relationship to the person who has been granted this status" Value="Letter from UK Visa or Immigration service AND/OR evidence of your relationship to the person who has been granted this status"></asp:ListItem>
                                 <asp:ListItem Text="EUSS code to be provided to evidence current status" Value="EUSS code to be provided to evidence current status"></asp:ListItem>
                                 <asp:ListItem Text="Visa page of passport" Value="Visa page of passport"></asp:ListItem>
                                 <asp:ListItem Text="Home Office letter" Value="Home Office letter"></asp:ListItem>
@@ -490,9 +493,24 @@ person who has been granted this status"></asp:ListItem>
      
     </div>
 
+</div>
 
-    <cc1:CCCButton id="btnBack" runat="server" Text="Back" ImageResource="btnBack" LinkResource="checkout_parentguardian_aspx" />
-        <cc1:CCCButton ID="btnContinue" runat="server" Text="Continue" ImageResource="btnContinue" LinkResource="checkout_employment" CausesValidation="true" EnableEnterKey="true" />
+<div class="alert alert-secondary" role="alert">
+    <div class="row gap-3">
+        <div class="col-md">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-secondary btn-lg BackButton"><i class="fa-solid fa-circle-chevron-left"></i> Back</button>
+                <cc1:CCCButton ID="btnBack" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Back" ImageResource="btnBack" CausesValidation="false" LinkResource="checkout_parentguardian_aspx" />
+            </span>
+        </div>
+        <div class="col-md text-end">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-primary btn-lcg btn-lg NextButton">Next <i class="fa-solid fa-circle-chevron-right"></i></button>
+                <cc1:CCCButton ID="btnContinue" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Continue" ImageResource="btnContinue" CausesValidation="true" EnableEnterKey="true" SaveForLater="true" SaveForLaterIn="Request" LinkResource="checkout_employment" />
+            </span>
+        </div>
+    </div>
+</div>
 
 <div class="container">
 

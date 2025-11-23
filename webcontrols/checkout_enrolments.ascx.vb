@@ -10,20 +10,29 @@ Imports System.Data.SqlClient
 Partial Class webcontrols_checkout_enrolments
     Inherits CheckoutBaseControl
 
+    Public CourseInformationID As Integer
+
+    Public ReadOnly Property OfferingID() As Integer
+        Get
+            Return WorkingData.ShoppingCart.Items(0).OfferingID
+        End Get
+    End Property
 
     Protected Overrides Sub OnLoad(e As EventArgs)
+
+        CourseInformationID = CourseInformationHelper.GetCourseInformationID(Me.Session)
 
         'WorkingData.EnrolmentRequestRow.FirstForename = "Test"
         'WorkingData.EnrolmentRequestRow.Surname = "Tester"
         'WorkingData.EnrolmentRequestRow.DateOfBirth = "03-sep-1996"
-       ' WorkingData.EnrolmentRequestRow.Sex = "F"
+        ' WorkingData.EnrolmentRequestRow.Sex = "F"
         'WorkingData.EnrolmentRequestRow.EthnicGroupID = "98"
-       ' WorkingData.EnrolmentRequestRow.Address1 = "317 test street"
-       ' WorkingData.EnrolmentRequestRow.PostcodeOut = "B66"
-       ' WorkingData.EnrolmentRequestRow.PostcodeIn = "6BZ"
-       ' WorkingData.EnrolmentRequestRow.CriminalConvictionID = "2"
-       ' WorkingData.EnrolmentRequestRow.Email = "b@b.com"
-       ' WorkingData.EnrolmentRequestRow.MobileTel = "0766666893"
+        ' WorkingData.EnrolmentRequestRow.Address1 = "317 test street"
+        ' WorkingData.EnrolmentRequestRow.PostcodeOut = "B66"
+        ' WorkingData.EnrolmentRequestRow.PostcodeIn = "6BZ"
+        ' WorkingData.EnrolmentRequestRow.CriminalConvictionID = "2"
+        ' WorkingData.EnrolmentRequestRow.Email = "b@b.com"
+        ' WorkingData.EnrolmentRequestRow.MobileTel = "0766666893"
 
         If IsPostBack Then
             UpdateAddress()
@@ -105,11 +114,11 @@ Partial Class webcontrols_checkout_enrolments
             ' intOfferingID = CInt(Me.Page.Request("OfferingID"))
             If WorkingData.EnrolmentRequestRow.Parent2FirstName Is Nothing And 1 = 2 Then
 
-                linkQuals.Visible = False
-                linkParent.Visible = False
-                linkFurther.Visible = False
-                linkDeclare.Visible = False
-                linkAttach.Visible = False
+                'linkQuals.Visible = False
+                'linkParent.Visible = False
+                'linkFurther.Visible = False
+                'linkDeclare.Visible = False
+                'linkAttach.Visible = False
                 '   aQuals.Disabled = True
 
             End If
@@ -539,13 +548,15 @@ Partial Class webcontrols_checkout_enrolments
     Protected Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
 
 
-        If WorkingData.ShoppingCart.ContainsItemsOfType("Application") Then
-            '   Response.Redirect(GetResourceValue("checkout_applications_aspx"))
-        ElseIf WorkingData.ShoppingCart.ContainsItemsOfType("Enrolment") Then
-            Response.Redirect(GetResourceValue("checkout_enrolments_aspx"))
-        ElseIf WorkingData.ShoppingCart.ContainsItemsOfType("Enquiry") Then
-            '   Response.Redirect(GetResourceValue("checkout_enquiries_aspx"))
-        End If
+        'If WorkingData.ShoppingCart.ContainsItemsOfType("Application") Then
+        '    '   Response.Redirect(GetResourceValue("checkout_applications_aspx"))
+        'ElseIf WorkingData.ShoppingCart.ContainsItemsOfType("Enrolment") Then
+        '    Response.Redirect(GetResourceValue("checkout_enrolments_aspx"))
+        'ElseIf WorkingData.ShoppingCart.ContainsItemsOfType("Enquiry") Then
+        '    '   Response.Redirect(GetResourceValue("checkout_enquiries_aspx"))
+        'End If
+
+        Response.Redirect("webenrolment.aspx?page=~/webcontrols/courseenrol.ascx&OfferingID=" & OfferingID)
 
     End Sub
 End Class

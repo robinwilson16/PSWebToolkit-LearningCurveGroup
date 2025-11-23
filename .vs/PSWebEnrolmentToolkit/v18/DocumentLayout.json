@@ -1,0 +1,292 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "W:\\PSWebEnrolment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\content\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:content\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\content\\lcg.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:content\\lcg.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\usercontrolmasterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:usercontrolmasterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\usercontrolmasterpage.master.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:usercontrolmasterpage.master.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_enrolments.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_enrolments.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\courseenrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\courseenrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\coursedisplay.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\coursedisplay.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_quals_on_entry.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_quals_on_entry.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_parent_guardian.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_parent_guardian.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_enrolments4.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_enrolments4.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_enrolments3.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_enrolments3.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_enrolments2.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_enrolments2.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_employment.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_employment.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_dataprotection.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_dataprotection.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_dataprotection.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_dataprotection.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\checkout_quals_on_entry.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\checkout_quals_on_entry.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "custom.css",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\content\\custom.css",
+              "RelativeDocumentMoniker": "content\\custom.css",
+              "ToolTip": "W:\\PSWebEnrolment\\content\\custom.css",
+              "RelativeToolTip": "content\\custom.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-23T17:48:18.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserControlMasterPage.master.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\UserControlMasterPage.master.vb",
+              "RelativeDocumentMoniker": "UserControlMasterPage.master.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\UserControlMasterPage.master.vb",
+              "RelativeToolTip": "UserControlMasterPage.master.vb",
+              "ViewState": "AgIAAHcCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-23T17:45:24.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserControlMasterPage.master",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\UserControlMasterPage.master",
+              "RelativeDocumentMoniker": "UserControlMasterPage.master",
+              "ToolTip": "W:\\PSWebEnrolment\\UserControlMasterPage.master",
+              "RelativeToolTip": "UserControlMasterPage.master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-23T17:45:18.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "checkout_parent_guardian.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_parent_guardian.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_parent_guardian.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_parent_guardian.ascx",
+              "RelativeToolTip": "webcontrols\\checkout_parent_guardian.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:36:30.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "checkout_enrolments4.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_enrolments4.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_enrolments4.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_enrolments4.ascx",
+              "RelativeToolTip": "webcontrols\\checkout_enrolments4.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:36:17.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "courseenrol.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\courseenrol.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\courseenrol.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\courseenrol.ascx",
+              "RelativeToolTip": "webcontrols\\courseenrol.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:06:24.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "checkout_quals_on_entry.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_quals_on_entry.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_quals_on_entry.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_quals_on_entry.ascx",
+              "RelativeToolTip": "webcontrols\\checkout_quals_on_entry.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:11:06.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "lcg.css",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\content\\lcg.css",
+              "RelativeDocumentMoniker": "content\\lcg.css",
+              "ToolTip": "W:\\PSWebEnrolment\\content\\lcg.css",
+              "RelativeToolTip": "content\\lcg.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-23T17:24:57.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "checkout_enrolments3.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_enrolments3.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_enrolments3.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_enrolments3.ascx",
+              "RelativeToolTip": "webcontrols\\checkout_enrolments3.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:15:06.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "checkout_enrolments.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_enrolments.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_enrolments.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_enrolments.ascx",
+              "RelativeToolTip": "webcontrols\\checkout_enrolments.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:06:24.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "checkout_employment.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_employment.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_employment.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_employment.ascx",
+              "RelativeToolTip": "webcontrols\\checkout_employment.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:35:12.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "checkout_dataprotection.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_dataprotection.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_dataprotection.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_dataprotection.ascx",
+              "RelativeToolTip": "webcontrols\\checkout_dataprotection.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:16:55.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "coursedisplay.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\coursedisplay.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\coursedisplay.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\coursedisplay.ascx",
+              "RelativeToolTip": "webcontrols\\coursedisplay.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T12:57:27.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "checkout_dataprotection.ascx.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_dataprotection.ascx.vb",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_dataprotection.ascx.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_dataprotection.ascx.vb",
+              "RelativeToolTip": "webcontrols\\checkout_dataprotection.ascx.vb",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-23T17:32:22.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "checkout_enrolments2.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_enrolments2.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_enrolments2.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_enrolments2.ascx",
+              "RelativeToolTip": "webcontrols\\checkout_enrolments2.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T17:08:25.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "checkout_quals_on_entry.ascx.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\checkout_quals_on_entry.ascx.vb",
+              "RelativeDocumentMoniker": "webcontrols\\checkout_quals_on_entry.ascx.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\checkout_quals_on_entry.ascx.vb",
+              "RelativeToolTip": "webcontrols\\checkout_quals_on_entry.ascx.vb",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAjwHYAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-23T17:11:16.18Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

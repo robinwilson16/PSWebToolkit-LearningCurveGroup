@@ -7,7 +7,16 @@ Imports CompassCC.ProSolution.PSWebEnrolmentKit
 Partial Class webcontrols_checkout_enrolments2
     Inherits CheckoutBaseControl
 
+    Public CourseInformationID As Integer
+
+    Public ReadOnly Property OfferingID() As Integer
+        Get
+            Return WorkingData.ShoppingCart.Items(0).OfferingID
+        End Get
+    End Property
+
     Protected Overrides Sub OnLoad(e As EventArgs)
+        CourseInformationID = CourseInformationHelper.GetCourseInformationID(Me.Session)
 
         'If Not Session("agecourse") Is Nothing Then lblAgeCourse.Text = CType("Your age on " & Session("startdate") & ": " & Session("agecourse") & " (" & Session("ageGroup"), String) & ")"
 

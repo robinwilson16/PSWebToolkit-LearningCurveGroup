@@ -4,8 +4,16 @@ Imports CompassCC.CCCSystem.CCCCommon
 Partial Class checkout_enrolments4_Initial_IAG
     Inherits CheckoutBaseControl
 
+    Public CourseInformationID As Integer
+
+    Public ReadOnly Property OfferingID() As Integer
+        Get
+            Return WorkingData.ShoppingCart.Items(0).OfferingID
+        End Get
+    End Property
 
     Protected Overrides Sub OnLoad(e As EventArgs)
+        CourseInformationID = CourseInformationHelper.GetCourseInformationID(Me.Session)
 
         If WorkingData.EnrolmentRequestRow.EnrolmentUserDefined1 <> "" Then txtCurrentQual.Value = WorkingData.EnrolmentRequestRow.EnrolmentUserDefined1
 '        If WorkingData.EnrolmentRequestRow.EnrolmentUserDefined2 <> "" Then selectDropDownCourseEntryRequirement.SelectedValue = WorkingData.EnrolmentRequestRow.EnrolmentUserDefined2

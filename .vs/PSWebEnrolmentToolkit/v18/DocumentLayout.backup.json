@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "W:\\PSWebEnrolment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\app_code\\courseinformationhelper.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:app_code\\courseinformationhelper.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\courseenrol.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\courseenrol.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\courseenrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\courseenrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\coursedisplay.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\coursedisplay.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\coursedisplay.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\coursedisplay.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\app_code\\salesforcehelper.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:app_code\\salesforcehelper.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\searchnew.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\searchnew.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|w:\\pswebenrolment\\webcontrols\\searchnew.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6C3968D-6386-421D-B77A-1016BF682E87}|W:\\PSWebEnrolment|solutionrelative:webcontrols\\searchnew.ascx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "coursedisplay.ascx.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\coursedisplay.ascx.vb",
+              "RelativeDocumentMoniker": "webcontrols\\coursedisplay.ascx.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\coursedisplay.ascx.vb",
+              "RelativeToolTip": "webcontrols\\coursedisplay.ascx.vb",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-23T13:12:02.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseInformationHelper.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\App_Code\\CourseInformationHelper.vb",
+              "RelativeDocumentMoniker": "App_Code\\CourseInformationHelper.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\App_Code\\CourseInformationHelper.vb",
+              "RelativeToolTip": "App_Code\\CourseInformationHelper.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-23T13:09:39.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SalesForceHelper.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\App_Code\\SalesForceHelper.vb",
+              "RelativeDocumentMoniker": "App_Code\\SalesForceHelper.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\App_Code\\SalesForceHelper.vb",
+              "RelativeToolTip": "App_Code\\SalesForceHelper.vb",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wCAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-23T13:09:01.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "courseenrol.ascx.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\courseenrol.ascx.vb",
+              "RelativeDocumentMoniker": "webcontrols\\courseenrol.ascx.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\courseenrol.ascx.vb",
+              "RelativeToolTip": "webcontrols\\courseenrol.ascx.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-23T13:08:37.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "courseenrol.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\courseenrol.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\courseenrol.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\courseenrol.ascx",
+              "RelativeToolTip": "webcontrols\\courseenrol.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T13:03:53.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "coursedisplay.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\coursedisplay.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\coursedisplay.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\coursedisplay.ascx",
+              "RelativeToolTip": "webcontrols\\coursedisplay.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T12:57:27.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "searchnew.ascx.vb",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\searchnew.ascx.vb",
+              "RelativeDocumentMoniker": "webcontrols\\searchnew.ascx.vb",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\searchnew.ascx.vb",
+              "RelativeToolTip": "webcontrols\\searchnew.ascx.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-23T12:56:19.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "searchnew.ascx",
+              "DocumentMoniker": "W:\\PSWebEnrolment\\webcontrols\\searchnew.ascx",
+              "RelativeDocumentMoniker": "webcontrols\\searchnew.ascx",
+              "ToolTip": "W:\\PSWebEnrolment\\webcontrols\\searchnew.ascx",
+              "RelativeToolTip": "webcontrols\\searchnew.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-11-23T12:55:35.976Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

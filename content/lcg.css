@@ -1,9 +1,17 @@
-﻿.TopLogo {
+﻿body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.TopLogo {
     max-height: 45px;
 }
 
 .bd-callout-lcg {
-    border-left-color: #4e2a60
+    border-left-color: #4F2B61
 }
 
 .bd-callout-grey1 {
@@ -15,21 +23,23 @@
 }
 
 .btn-lcg {
-    background-color: #4e2a60;
+    background-color: #4F2B61;
+    border-color: #4F2B61;
     color: #FFFFFF;
 }
 
 .btn-lcg:link,
 .btn-lcg:active,
 .btn-lcg:visited {
-    background-color: #4e2a60;
+    background-color: #4F2B61;
     color: #FFFFFF;
-    border-color: #4e2a60;
+    border-color: #4F2B61;
 }
 
 .btn-lcg:hover {
     background-color: #f2ebfb;
-    color: #4e2a60;
+    color: #4F2B61;
+    border-color: #8B4CAB;
 }
 
 .ScrollPanel {
@@ -48,4 +58,27 @@
 .resultspanel {
     margin-right: 0px;
     padding-right: 0px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+ol.breadcrumb li.breadcrumb-item {
+    color: #4F2B61;
+}
+
+ol.breadcrumb li.breadcrumb-item a:link,
+ol.breadcrumb li.breadcrumb-item a:active,
+ol.breadcrumb li.breadcrumb-item a:visited {
+    color: #4F2B61;
+    text-decoration: none;
+}
+
+ol.breadcrumb li.breadcrumb-item a:hover {
+    color: #8B4CAB;
+}
+
+ol.breadcrumb li.active {
+    font-weight: bold;
 }

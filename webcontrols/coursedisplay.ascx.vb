@@ -25,6 +25,9 @@ Partial Class coursedisplay
         'Get SalesForce ID from query string or session
         Dim SalesForceID As String = SalesForceHelper.GetAndSetSalesForceID(Me.Request, Me.Session)
 
+        'Save CourseInformationID in session for use by other controls
+        CourseInformationHelper.SetCourseInformationID(Me.Session, Request("CourseInformationID"))
+
         Session.Item("_CCCCallingPage") = Me.Request.RawUrl
 
         btnPrintPDF.NavigateUrl = "~/Handlers/PDFPrint.ashx?CourseInformationID=" & CourseInformationID

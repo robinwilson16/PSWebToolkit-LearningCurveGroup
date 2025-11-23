@@ -3,11 +3,18 @@
     TagPrefix="cc1" %>
     <%@ Import Namespace="CompassCC.CCCSystem.CCCCommon"%>
 
-<br /><br />
-                <ol class="breadcrumb">
-                  <li><a href="default.aspx">Home</a></li>
-                  <li class="active">Course Details</li>
-                </ol>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-3 mb-3 navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="default.aspx"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-scroll"></i> Course Details</li>
+        </ol>
+    </div>
+</nav>
+
+<div class="progress mb-3" role="progressbar" aria-label="Online Enrolment Progress" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+  <div class="progress-barlcg progress-bar-striped progress-bar-animated" style="width: 5%">5%</div>
+</div>
 
 <section>
     <h3>
@@ -15,6 +22,10 @@
 
     </h3>
 </section>
+
+<div class="bd-callout bd-callout-lcg bd-callout-grey1 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> Course Information</h4>
+
     <asp:HyperLink runat="server" ID="btnPrintPDF" CssClass="btn btn-primary">
          <span class="glyphicon glyphicon-download-alt" style="padding-right:5px;"></span><span>Save as PDF</span>
     </asp:HyperLink>     
@@ -51,15 +62,29 @@
                     another course.</p>
             </EmptyDataTemplate>
         </asp:GridView>
-       
+</div>   
 
-    <h4>
-        Will I have to pay?        You will always have to pay the full fee when enroling online. You may be able to
+<div class="alert alert-warning" role="alert">
+    <div class="row">
+        <div class="col-md-auto d-flex align-items-center">
+            <h1><i class="fa-solid fa-sterling-sign"></i></h1>
+        </div>
+        <div class="col-md">
+            <h4 class="alert-heading">Will I have to pay?</h4>
+            <p>
+                You will always have to pay the full fee when enroling online. You may be able to
         get a refund for all or part of the fees for your course if you are eligible. Please
-        look at the following link for more information:    </h4>
-    
+        look at the following link for more information:
+            </p>
+            <p class="text-center">
+                <a href="#" class="show_hide btn btn-warning">Will I have to pay fees?</a>
+            </p>
+            
+        </div>
+    </div>
+</div>
 
-    <a href="#" class="show_hide btn btn-primary">Will I have to pay fees?</a>
+    
 <div class="slidingDiv">
     <p>
     If you are studying on a part-time course and you receive one of the following benefits, or you depend financially on someone who does, you are entitled to have your tuition fees waived: </p>
@@ -83,8 +108,8 @@ It is essential that you inform us if your entitlement changes at any time durin
 
 </div>
 
-<div>
-        <h3>More information about this Course</h3>
+<div class="bd-callout bd-callout-lcg bd-callout-grey2 mb-3">
+    <h4><i class="fa-solid fa-square-caret-right"></i> More Information About This Course</h4>
 
     <cc1:KISWidget ID="KISWidget1" runat="server" Orientation="Horizontal" UKPRN="10003035" />
 
@@ -126,9 +151,23 @@ It is essential that you inform us if your entitlement changes at any time durin
 </div>
 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server"  CssClass ="error"/>
-    &nbsp;&nbsp;<br />
-        <cc1:CCCButton id="btnBack" runat="server" Text="Back (Search for other courses)" ImageResource="btnBack" LinkResource="search_aspx"/>
 
+
+<div class="alert alert-secondary" role="alert">
+    <div class="row gap-3">
+        <div class="col-md">
+            <span class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-secondary btn-lg BackButton"><i class="fa-solid fa-circle-chevron-left"></i> Back</button>
+                <cc1:CCCButton ID="btnBack" CssClass="d-none" class="d-none" ClientIDMode="Static" runat="server" Text="Back (Search for other courses)" ImageResource="btnBack" CausesValidation="false" LinkResource="search_aspx" />
+            </span>
+        </div>
+        <div class="col-md text-end">
+            <span class="d-grid gap-2 d-md-block">
+                
+            </span>
+        </div>
+    </div>
+</div>
 
 
 <script type="text/javascript">

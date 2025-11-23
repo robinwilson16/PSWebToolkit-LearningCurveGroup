@@ -4,9 +4,18 @@ Imports CompassCC.CCCSystem.CCCCommon
 Partial Class checkout_dataprotection
     Inherits CheckoutBaseControl
 
+    Public CourseInformationID As Integer
+
+    Public ReadOnly Property OfferingID() As Integer
+        Get
+            Return WorkingData.ShoppingCart.Items(0).OfferingID
+        End Get
+    End Property
 
     Protected Overrides Sub OnLoad(e As EventArgs)
         MyBase.OnLoad(e)
+
+        CourseInformationID = CourseInformationHelper.GetCourseInformationID(Me.Session)
 
         'Dim SalesForceID As String = SalesForceHelper.GetSalesForceID(Me.Session)
         'Dim SalesForceID As String = SalesForceHelper.GetAndSetSalesForceID(Me.Request, Me.Session)
