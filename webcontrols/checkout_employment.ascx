@@ -279,7 +279,7 @@
 
         <div class="row">
                       <div class="col-sm-12 columns form-group"> 
-             <span class="textfieldlabelrequired">* My take-home pay is less than 16 times the appropriate age-related rate of national minimum wage/national living wage a week, or £892 per month (individual claim) or £1,437 a month (household claim)</span>
+             <span class="textfieldlabelrequired">* My take-home pay is less than 16 times the appropriate age-related rate of national minimum wage/national living wage a week, or £952 per month (individual claim) or £1,534 a month (household claim)</span>
              <asp:DropDownList ID="selectDropDownTakeHomePay" runat="server" CssClass="textfield form-control"  Width="265">
              <asp:ListItem value="">Please select...</asp:ListItem>
              <asp:ListItem value="1">Yes - Please attach recent payslip or P60 as evidence</asp:ListItem>

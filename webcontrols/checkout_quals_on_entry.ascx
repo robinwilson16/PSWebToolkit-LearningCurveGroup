@@ -61,19 +61,19 @@
     <h4><i class="fa-solid fa-square-caret-right"></i> Current Courses and Highest Qualifications</h4>
 
       <div class="row">
-        <div class="col-sm-12 columns form-group"> 
+        <div class="col-sm-12 columns form-group mb-3"> 
             <cc1:StudentEnrolmentField StudentEnrolmentFieldType="StudyElsewhere" ID="fldStudyElse" runat="server" Visible="true" LabelWidth="350" IsRequired="false"  CustomCaption="Are you currently enrolled on another funded course?"/>
           </div>
    </div>
 
        <div class="row">
-        <div class="col-sm-12 columns form-group"> 
+        <div class="col-sm-12 columns form-group mb-3"> 
             <cc1:StudentEnrolmentField StudentEnrolmentFieldType="StudentDetailUserDefined60" ID="txtAnotherFundedCourse" runat="server" Visible="true" LabelWidth="350" IsRequired="false"  CustomCaption="If ticked, please provide details including days and times of attendance:"/>
           </div>
    </div>
 
          <%--<div class="row">
-         <div class="col-sm-12 columns form-group">
+         <div class="col-sm-12 columns form-group mb-3">
               <p>Has learner been excluded from learning prior to LCG?</p>
               <asp:CheckBox runat="server" ID="chkPrevExcluded">
               </asp:CheckBox>
@@ -81,7 +81,7 @@
         </div>--%>
 
         <div class="row">
-                      <div class="col-sm-12 columns form-group"> 
+                      <div class="col-sm-12 columns form-group mb-3"> 
              <span class="textfieldlabelrequired">* Has learner been excluded from learning prior to LCG?</span>
              <asp:DropDownList ID="selectDropDownLearnerExcluded" runat="server" CssClass="textfield form-control" Visible="true" LabelWidth="600" IsRequired="true"  Width="265" >
              <asp:ListItem value="">Please select...</asp:ListItem>
@@ -92,14 +92,14 @@
    </div>
 
     <div class="row">
-          <div class="col-sm-6 columns form-group"> 
+          <div class="col-sm-6 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField StudentEnrolmentFieldType="StudentFirstLanguageID" ID="fldLanguage" runat="server" IsRequired="false" CustomCaption="* If English is not your first language, please select" LabelWidth="350"/>
           </div>
 
     </div>
 
     <div class="row">
-        <div class="col-sm-12 columns form-group"> 
+        <div class="col-sm-12 columns form-group mb-3"> 
             <cc1:studentenrolmentfield id="fldPriorAttainmentLevelID" runat="server" customcaption="* Please indicate your highest qualification to date?" ExcludedIDValues="98" isrequired="true" labelwidth="350" StudentEnrolmentFieldType="PriorAttainmentLevelID"></cc1:studentenrolmentfield>
         <span id="showItem"><a class="btn btn-primary" role="button">Unsure? Click me to help you decide</a></span>
             </div>
@@ -214,13 +214,13 @@
     <p>Do you have functional skills L2 in English or an alternative English qualification:</p>
 
   <div class="row">
-      <div class="col-sm-4 columns form-group"> 
+      <div class="col-sm-4 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField id="fldGCSEEngCoF" runat="server" customcaption="* GCSE English CoF" CustomFieldType="Lookup" labelwidth="300" StudentEnrolmentFieldType="StudentDetailUserDefined46"></cc1:StudentEnrolmentField>
           </div>
-       <div class="col-sm-4 columns form-group"> 
+       <div class="col-sm-4 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField id="fldGCSEEngGrade" runat="server" customcaption="* GCSE English Grade" CustomFieldType="Lookup"  labelwidth="300" StudentEnrolmentFieldType="StudentDetailUserDefined47"></cc1:StudentEnrolmentField>
           </div>
-             <div class="col-sm-4 columns form-group"> 
+             <div class="col-sm-4 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField id="StudentEnrolmentField2" runat="server" customcaption="* GCSEs atttained by Yr11"   labelwidth="300" StudentEnrolmentFieldType="AchievedEnglishGCSEByEndOfYear11"></cc1:StudentEnrolmentField>
           </div>
    </div>
@@ -228,13 +228,13 @@
     <p>Do you have functional skills L2 in Maths or an alternative Maths qualification:</p>
 
   <div class="row">
-      <div class="col-sm-4 columns form-group"> 
+      <div class="col-sm-4 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField id="fldGCSEMathCoF" runat="server" customcaption="* GCSE Maths CoF" CustomFieldType="Lookup" labelwidth="300" StudentEnrolmentFieldType="StudentDetailUserDefined48"></cc1:StudentEnrolmentField>
           </div>
-       <div class="col-sm-4 columns form-group"> 
+       <div class="col-sm-4 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField id="fldGCSEMathGrade" runat="server" customcaption="* GCSE Maths Grade" CustomFieldType="Lookup"  labelwidth="300" StudentEnrolmentFieldType="StudentDetailUserDefined49"></cc1:StudentEnrolmentField>
           </div>
-             <div class="col-sm-4 columns form-group"> 
+             <div class="col-sm-4 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField id="StudentEnrolmentField1" runat="server" customcaption="* GCSEs atttained by Yr11"   labelwidth="300" StudentEnrolmentFieldType="AchievedMathsGCSEByEndOfYear11"></cc1:StudentEnrolmentField>
           </div>
    </div>

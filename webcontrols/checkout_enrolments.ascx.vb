@@ -1,16 +1,24 @@
 ﻿
-Imports CompassCC.ProSolution.PSWebEnrolmentKit
-Imports CompassCC.CCCSystem.CCCCommon
-Imports Microsoft.VisualBasic.ApplicationServices
 Imports System.Data
+Imports System.Data.SqlClient
+Imports System.IO.Ports
+Imports System.Web.UI.HtmlControls
+Imports CompassCC.CCCSystem.CCCCommon
+Imports CompassCC.ProSolution.PSWebEnrolmentKit
+Imports Microsoft.VisualBasic.ApplicationServices
 Imports PdfSharp.Pdf.Content.Objects
 Imports CommandType = System.Data.CommandType
-Imports System.Data.SqlClient
 
 Partial Class webcontrols_checkout_enrolments
     Inherits CheckoutBaseControl
 
     Public CourseInformationID As Integer
+    Public Is16To18 As Boolean = False
+    Public Is16To25 As Boolean = False
+    Private UDF53CurrentValue = Nothing
+    Private UDF54CurrentValue = Nothing
+
+    Public tblOffering As New OfferingDataTable
 
     Public ReadOnly Property OfferingID() As Integer
         Get
@@ -21,6 +29,18 @@ Partial Class webcontrols_checkout_enrolments
     Protected Overrides Sub OnLoad(e As EventArgs)
 
         CourseInformationID = CourseInformationHelper.GetCourseInformationID(Me.Session)
+
+        Dim offeringRow As OfferingRow = CourseHelper.GetCourse(OfferingID)
+        WorkingData.EnrolmentRequestRow.AcademicYearID = offeringRow.AcademicYearID
+        CheckAge()
+
+        SwitchFieldsBackOnLoad()
+
+        If Not IsPostBack Then
+            SetReceivedFreeSchoolMealsControl()
+            SetYoungCarerControl()
+            SetYoungParentControl()
+        End If
 
         'WorkingData.EnrolmentRequestRow.FirstForename = "Test"
         'WorkingData.EnrolmentRequestRow.Surname = "Tester"
@@ -131,7 +151,7 @@ Partial Class webcontrols_checkout_enrolments
 
         If Session("snamereadonly") = "Y" Then fldSurname.IsReadOnly = True
         If Session("fnamereadonly") = "Y" Then fldFirstName.IsReadOnly = True
-        If Session("dobreadonly") = "Y" Then datepicker.IsReadOnly = True
+        'If Session("dobreadonly") = "Y" Then datepicker.IsReadOnly = True
 
         If Not Session("offeringtype") Is Nothing Then
             '    lblOfferingType.Text = CType("offeringType - " & Session("offeringtype"), String)
@@ -150,11 +170,180 @@ Partial Class webcontrols_checkout_enrolments
 
         MyBase.OnLoad(e)
     End Sub
+
+    Private Sub CheckAge()
+        Dim academicYear = WorkingData.EnrolmentRequestRow.AcademicYearID
+        Dim dobReferenceDate As Date = CDate("20" & academicYear.Substring(0, 2) & "-08-31")
+        Dim dateAt18 As Date = dobReferenceDate.AddYears(-18)
+        Dim dateAt25 As Date = dobReferenceDate.AddYears(-25)
+
+        If WorkingData.EnrolmentRequestRow.DateOfBirth > dateAt18 Then
+            Is16To18 = True
+        Else
+            Is16To18 = False
+        End If
+
+        If WorkingData.EnrolmentRequestRow.DateOfBirth > dateAt25 Then
+            Is16To25 = True
+        Else
+            Is16To25 = False
+        End If
+    End Sub
+
+    Protected Sub ReceivedFreeSchoolMeals_Changed(sender As Object, e As EventArgs)
+        Dim radioButton = TryCast(sender, RadioButton)
+
+        If radioButton IsNot Nothing Then
+            If radioButton.ID = "ReceivedFreeSchoolMealsY" Then
+                SetReceivedFreeSchoolMealsValue("Y")
+            ElseIf radioButton.ID = "ReceivedFreeSchoolMealsN" Then
+                SetReceivedFreeSchoolMealsValue("N")
+            Else
+                SetReceivedFreeSchoolMealsValue("")
+            End If
+        End If
+    End Sub
+
+    Public Sub SetReceivedFreeSchoolMealsValue()
+        If ReceivedFreeSchoolMealsY.Checked = True Then
+            WorkingData.EnrolmentRequestRow.ReceivedFreeSchoolMeals = True
+        ElseIf ReceivedFreeSchoolMealsN.Checked = True Then
+            WorkingData.EnrolmentRequestRow.ReceivedFreeSchoolMeals = False
+        Else
+            WorkingData.EnrolmentRequestRow.ReceivedFreeSchoolMeals = Nothing
+        End If
+    End Sub
+
+    Public Sub SetReceivedFreeSchoolMealsValue(value As String)
+        If value = "Y" Then
+            WorkingData.EnrolmentRequestRow.ReceivedFreeSchoolMeals = True
+        ElseIf value = "N" Then
+            WorkingData.EnrolmentRequestRow.ReceivedFreeSchoolMeals = False
+        Else
+            WorkingData.EnrolmentRequestRow.ReceivedFreeSchoolMeals = Nothing
+        End If
+    End Sub
+
+    Public Sub SetReceivedFreeSchoolMealsControl()
+        If WorkingData.EnrolmentRequestRow.ReceivedFreeSchoolMeals = True Then
+            If ReceivedFreeSchoolMealsY IsNot Nothing And ReceivedFreeSchoolMealsN IsNot Nothing Then
+                ReceivedFreeSchoolMealsY.Checked = True
+            End If
+        ElseIf WorkingData.EnrolmentRequestRow.ReceivedFreeSchoolMeals = False Then
+            If ReceivedFreeSchoolMealsY IsNot Nothing Then
+                ReceivedFreeSchoolMealsN.Checked = True
+            End If
+        Else
+            ReceivedFreeSchoolMealsY.Checked = False
+            ReceivedFreeSchoolMealsN.Checked = False
+        End If
+    End Sub
+
+    Protected Sub YoungCarer_Changed(sender As Object, e As EventArgs)
+        Dim radioButton = TryCast(sender, RadioButton)
+
+        If radioButton IsNot Nothing Then
+            If radioButton.ID = "YoungCarerY" Then
+                SetYoungCarerValue("Y")
+            ElseIf radioButton.ID = "YoungCarerN" Then
+                SetYoungCarerValue("N")
+            Else
+                SetYoungCarerValue("")
+            End If
+        End If
+    End Sub
+
+    Public Sub SetYoungCarerValue()
+        If YoungCarerY.Checked = True Then
+            WorkingData.EnrolmentRequestRow.YoungCarer = True
+        ElseIf YoungCarerN.Checked = True Then
+            WorkingData.EnrolmentRequestRow.YoungCarer = False
+        Else
+            WorkingData.EnrolmentRequestRow.YoungCarer = Nothing
+        End If
+    End Sub
+
+    Public Sub SetYoungCarerValue(value As String)
+        If value = "Y" Then
+            WorkingData.EnrolmentRequestRow.YoungCarer = True
+        ElseIf value = "N" Then
+            WorkingData.EnrolmentRequestRow.YoungCarer = False
+        Else
+            WorkingData.EnrolmentRequestRow.YoungCarer = Nothing
+        End If
+    End Sub
+
+    Public Sub SetYoungCarerControl()
+        If WorkingData.EnrolmentRequestRow.YoungCarer = True Then
+            If YoungCarerY IsNot Nothing And YoungCarerN IsNot Nothing Then
+                YoungCarerY.Checked = True
+            End If
+        ElseIf WorkingData.EnrolmentRequestRow.YoungCarer = False Then
+            If YoungCarerY IsNot Nothing Then
+                YoungCarerN.Checked = True
+            End If
+        Else
+            YoungCarerY.Checked = False
+            YoungCarerN.Checked = False
+        End If
+    End Sub
+
+    Protected Sub YoungParent_Changed(sender As Object, e As EventArgs)
+        Dim radioButton = TryCast(sender, RadioButton)
+
+        If radioButton IsNot Nothing Then
+            If radioButton.ID = "YoungParentY" Then
+                SetYoungParentValue("Y")
+            ElseIf radioButton.ID = "YoungParentN" Then
+                SetYoungParentValue("N")
+            Else
+                SetYoungParentValue("")
+            End If
+        End If
+    End Sub
+
+    Public Sub SetYoungParentValue()
+        If YoungParentY.Checked = True Then
+            WorkingData.EnrolmentRequestRow.YoungParent = True
+        ElseIf YoungParentN.Checked = True Then
+            WorkingData.EnrolmentRequestRow.YoungParent = False
+        Else
+            WorkingData.EnrolmentRequestRow.YoungParent = Nothing
+        End If
+    End Sub
+
+    Public Sub SetYoungParentValue(value As String)
+        If value = "Y" Then
+            WorkingData.EnrolmentRequestRow.YoungParent = True
+        ElseIf value = "N" Then
+            WorkingData.EnrolmentRequestRow.YoungParent = False
+        Else
+            WorkingData.EnrolmentRequestRow.YoungParent = Nothing
+        End If
+    End Sub
+
+    Public Sub SetYoungParentControl()
+        If WorkingData.EnrolmentRequestRow.YoungParent = True Then
+            If YoungParentY IsNot Nothing And YoungParentN IsNot Nothing Then
+                YoungParentY.Checked = True
+            End If
+        ElseIf WorkingData.EnrolmentRequestRow.YoungParent = False Then
+            If YoungParentY IsNot Nothing Then
+                YoungParentN.Checked = True
+            End If
+        Else
+            YoungParentY.Checked = False
+            YoungParentN.Checked = False
+        End If
+    End Sub
+
     Public Overrides Sub ValidateControl()
+
+        CheckAge()
 
         If Len(txtAddress1.Value) = 0 Then
             Dim v As New CustomValidator
-            v.ErrorMessage = "You must enter the 1st line of the address"
+            v.ErrorMessage = "You must enter the 1St line Of the address"
             v.IsValid = False
             Me.Page.Validators.Add(v)
         End If
@@ -213,6 +402,34 @@ Partial Class webcontrols_checkout_enrolments
             End If
         End If
 
+        'Received Free School Meals
+        If Is16To25 = True Then
+            If Not ReceivedFreeSchoolMealsY.Checked = True And Not ReceivedFreeSchoolMealsN.Checked = True Then
+                fldReceivedFreeSchoolMealsValidator.ErrorMessage = "Please select whether you have receieved free school meals."
+                fldReceivedFreeSchoolMealsValidator.IsValid = False
+                fldReceivedFreeSchoolMealsValidator.CssClass = "error alert alert-danger"
+                ReceivedFreeSchoolMealsYContainer.Attributes.Add("Class", "form-check form-check-inline ErrorContainer")
+                ReceivedFreeSchoolMealsNContainer.Attributes.Add("Class", "form-check form-check-inline ErrorContainer")
+            End If
+        End If
+
+        'Young Carer
+        If Not YoungCarerY.Checked = True And Not YoungCarerN.Checked = True Then
+            fldYoungCarerValidator.ErrorMessage = "Please select whether you have any caring responsabilities."
+            fldYoungCarerValidator.IsValid = False
+            fldYoungCarerValidator.CssClass = "error alert alert-danger"
+            YoungCarerYContainer.Attributes.Add("Class", "form-check form-check-inline ErrorContainer")
+            YoungCarerNContainer.Attributes.Add("Class", "form-check form-check-inline ErrorContainer")
+        End If
+
+        'Young Parent
+        If Not YoungParentY.Checked = True And Not YoungParentN.Checked = True Then
+            fldYoungParentValidator.ErrorMessage = "Please select whether you are a parent."
+            fldYoungParentValidator.IsValid = False
+            fldYoungParentValidator.CssClass = "error alert alert-danger"
+            YoungParentYContainer.Attributes.Add("Class", "form-check form-check-inline ErrorContainer")
+            YoungParentNContainer.Attributes.Add("Class", "form-check form-check-inline ErrorContainer")
+        End If
 
         MyBase.ValidateControl()
     End Sub
@@ -484,10 +701,15 @@ Partial Class webcontrols_checkout_enrolments
 
     Private Sub btnContinue_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnContinue.Click
 
+        SwitchFieldsOnSubmit()
+
+        SetReceivedFreeSchoolMealsValue()
+        SetYoungCarerValue()
+        SetYoungParentValue()
+
         Me.Page.Validate()
 
         If Me.Page.IsValid Then
-
 
             WorkingData.EnrolmentRequest(0).Address1 = txtAddress1.Value
             WorkingData.EnrolmentRequest(0).Address2 = txtAddress2.Value
@@ -545,8 +767,29 @@ Partial Class webcontrols_checkout_enrolments
         Return xmlLocation
     End Function
 
+    Protected Sub SwitchFieldsOnSubmit()
+        'Set UDF3 to value of UDF53
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined3 = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined53
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined8 = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined54
+        'Restore original value of UDF53
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined53 = UDF53CurrentValue
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined54 = UDF54CurrentValue
+    End Sub
+
+    Protected Sub SwitchFieldsBackOnLoad()
+        If Not IsNothing(WorkingData.EnrolmentRequestRow.StudentDetailUserDefined3) Then
+            'Backup current value of UDF53
+            UDF53CurrentValue = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined53
+            UDF54CurrentValue = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined54
+            'Move value of UDF3 to UDF53 for use in this control
+            WorkingData.EnrolmentRequestRow.StudentDetailUserDefined53 = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined3
+            WorkingData.EnrolmentRequestRow.StudentDetailUserDefined54 = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined8
+        End If
+    End Sub
+
     Protected Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
 
+        SwitchFieldsOnSubmit()
 
         'If WorkingData.ShoppingCart.ContainsItemsOfType("Application") Then
         '    '   Response.Redirect(GetResourceValue("checkout_applications_aspx"))

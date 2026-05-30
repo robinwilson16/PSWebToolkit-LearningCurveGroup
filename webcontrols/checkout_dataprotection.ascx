@@ -102,7 +102,7 @@ prior qualifications. I am aware of the fees and charges relating to the program
 understand that if I have declared false information, action may be taken against me to reclaim tuition fees
 and any associated costs.</p>
 
-<p>By signing this form, I agree to abide by Learning Curve Group Policies and Procedures. Learning Curve Group includes Learning Curve (10008935), Profound Services (10022358), Northern Care Training (10013515), London Hairdressing Apprenticeship Academy (10035171), Acorn Training Consultants (10000108), Antrec Ltd (10043333), White Rose (10007484) and MPCT (10000311)
+<p>By signing this form, I agree to abide by Learning Curve Group Policies and Procedures. Learning Curve Group includes Learning Curve (10008935), Profound Services (10022358), Northern Care Training (10013515), London Hairdressing Apprenticeship Academy (10035171), Acorn Training Consultants (10000108), Antrec Ltd (10043333), PGL (10008426) and MPCT (10000311)
     </p>
     <br />
   

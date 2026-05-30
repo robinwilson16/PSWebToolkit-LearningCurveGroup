@@ -10,6 +10,23 @@ h2, h3, h4 {
     max-height: 45px;
 }
 
+.ErrorInput input,
+.ErrorInput select {
+    border: 1px solid red;
+}
+
+.ErrorContainer {
+    border: 1px solid red;
+}
+
+span.error {
+    color: #F44336;
+    border: 1px solid #e95050;
+    background-color: #f8d7da;
+    border-radius: 0.375rem;
+    padding: 16px;
+}
+
 .bd-callout-lcg {
     border-left-color: #4F2B61
 }

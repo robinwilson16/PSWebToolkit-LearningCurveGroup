@@ -60,6 +60,7 @@ Partial Class webcontrols_checkout_enrolments2
                 If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined42 = "True" Then chkEEA.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined42
                 If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined43 = "True" Then chkAbode.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined43
                 If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined44 = "True" Then chkSocial.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined44
+                If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined34 = "True" Then chkDependentOfAdult.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined34
                 If WorkingData.EnrolmentRequestRow.StudentDetailUserDefined45 = "True" Then chkNoAssess.Checked = WorkingData.EnrolmentRequestRow.StudentDetailUserDefined45
                 loadAttachments()
             End If
@@ -113,6 +114,7 @@ Partial Class webcontrols_checkout_enrolments2
         WorkingData.EnrolmentRequestRow.StudentDetailUserDefined42 = chkEEA.Checked
         WorkingData.EnrolmentRequestRow.StudentDetailUserDefined43 = chkAbode.Checked
         WorkingData.EnrolmentRequestRow.StudentDetailUserDefined44 = chkSocial.Checked
+        WorkingData.EnrolmentRequestRow.StudentDetailUserDefined34 = chkDependentOfAdult.Checked
         WorkingData.EnrolmentRequestRow.StudentDetailUserDefined45 = chkNoAssess.Checked
         If Me.Page.IsValid Then
 
@@ -224,6 +226,7 @@ Partial Class webcontrols_checkout_enrolments2
                 chkEEA.Checked = False And
                 chkAbode.Checked = False And
                 chkSocial.Checked = False And
+                chkDependentOfAdult.Checked = False And
                 chkNoAssess.Checked = False Then
                 Dim v As New CustomValidator
                 v.ErrorMessage = " You must provde provide a response the Section 1 OR Section 2 of the Eligibility Assessment questions"

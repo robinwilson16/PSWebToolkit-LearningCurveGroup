@@ -61,18 +61,18 @@
     <h4><i class="fa-solid fa-square-caret-right"></i> Eligibility</h4>
 
         <div class="row">
-       <div class="col-sm-6 columns form-group"> 
+       <div class="col-sm-6 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField StudentEnrolmentFieldType="NationalityID" ID="fldNationalityID" runat="server" IsRequired="true" CustomCaption="* Nationality" />
         </div>
-       <div class="col-sm-6 columns form-group"> 
+       <div class="col-sm-6 columns form-group mb-3"> 
             <cc1:StudentEnrolmentField StudentEnrolmentFieldType="CountryID" ID="StudentEnrolmentField20" runat="server" IsRequired="true" LabelWidth="300" CustomCaption="* Home Country (permanent residence)" />
         </div>
  
 
     </div>
  <div class="row">
-        <div class="col-sm-12 columns form-group"> 
-            <p><strong>* Are you a UK national and have you been ordinarily resident in the UK or EEA for at least the previous three years?</strong></p>
+        <div class="col-sm-12 columns form-group mb-3"> 
+            <p><strong>* Are you a UK national and have you been ordinarily resident in the UK for at least the previous three years?</strong></p>
               <asp:DropDownList ID="selectEuro" runat="server" CssClass="textfield form-control"  Width="200">
              <asp:ListItem value="">Please select...</asp:ListItem>
              <asp:ListItem value="1">Yes</asp:ListItem>
@@ -82,7 +82,7 @@
           </div>
      </div>
      <div class="row euroFields">
-               <div class="col-sm-12 columns form-group"> 
+               <div class="col-sm-12 columns form-group mb-3"> 
             <p><strong>* Are you an EEA national (non-Irish), have obtained pre-settled/settled status under the EU settlement scheme, and have lived continuously in the EEA or UK for at least the previous three years on your first day in learning?</strong></p>
               <asp:DropDownList ID="selectPreSettle" runat="server" CssClass="textfield form-control" Width="200">
              <asp:ListItem value="">Please select...</asp:ListItem>
@@ -94,7 +94,7 @@
      </div>
 
 <div class="row non-UK">
-       <div class="col-sm-12 columns form-group"> 
+       <div class="col-sm-12 columns form-group mb-3"> 
                  
             <p><strong>* Are you a non-UK national, have permission to live in the UK for purposes other than education only, have obtained pre-settled/settled status under the EU settlement scheme, and have been ordinarily resident in the UK (or Ireland if an Irish national) for at least the previous three years on your first day in learning?</strong></p>
               <asp:DropDownList ID="selectEducation" runat="server" CssClass="textfield form-control"  Width="200">
@@ -108,7 +108,7 @@
 
 
      <div class="row" id="EUSSShareCode">
-               <div class="col-sm-12 columns form-group"> 
+               <div class="col-sm-12 columns form-group mb-3"> 
             <p><strong>* Please provide your immigration share code</strong></p>
              <cc1:StudentEnrolmentField StudentEnrolmentFieldType="StudentDetailUserDefined16" ID="EUSSCode" runat="server" IsRequired="false"  CustomCaption="* Immigration Share Code"/>
                
@@ -117,7 +117,7 @@
     
 
     <div class="row">
-       <div class="col-sm-12 columns form-group"> 
+       <div class="col-sm-12 columns form-group mb-3"> 
                  
             <p><strong>* Do you currently have permission to stay in the UK for at least 12 months?</strong></p>
               <asp:DropDownList ID="selectUK12months" runat="server" CssClass="textfield form-control"  Width="200">
@@ -162,7 +162,7 @@
                     <div class="checkbox checkboxlist">
                     <asp:CheckBox id="chkDiscretionaryRemain" runat="Server" Text="Discretionary Leave to Enter/Remain" CssClass="checkbox-inline" ></asp:CheckBox><br />
                    <!-- <asp:CheckBox id="chkExceptional" runat="Server" Text="Exceptional Leave to Enter/Remain" CssClass="checkbox-inline" ></asp:CheckBox><br />-->
-                    <asp:CheckBox id="chkIndefinite" runat="Server" Text="Indefinite Leave to Enter/Remain" CssClass="checkbox-inline" ></asp:CheckBox><br />
+                    <asp:CheckBox id="chkIndefinite" runat="Server" Text="Indefinite Leave to Enter/Remain (Settled Status)" CssClass="checkbox-inline" ></asp:CheckBox><br />
                     <asp:CheckBox id="chkAfghan" runat="Server" Text="A person granted stateless leave is a person who has extant leave to remain as a stateless person under the immigration rules (within the meaning given in section 33(1) of the Immigration Act 1971)" CssClass="checkbox-inline" ></asp:CheckBox><br />
                     <asp:CheckBox id="chkHumanitarian" runat="Server" Text="Humanitarian Protection" CssClass="checkbox-inline" ></asp:CheckBox><br />
                     <asp:CheckBox id="chkOutside" runat="Server" Text="Leave Outside the Immigration Rules" CssClass="checkbox-inline" ></asp:CheckBox><br />
@@ -310,16 +310,26 @@
                    Relevant page of your passport OR Certificate of Entitlement of Registration
                 </td>
              </tr>
-           <tr>
+            <tr>
                 <td> 
                     <div class="checkbox checkboxlist">
-                    <asp:CheckBox id="chkSocial" runat="Server" Text="are in the care of Social Services/in receipt of Section 4 support" CssClass="checkbox-inline" ></asp:CheckBox>
+                        <asp:CheckBox id="chkSocial" runat="Server" Text="are in the care of Social Services/in receipt of Section 4 support" CssClass="checkbox-inline" ></asp:CheckBox>
                     </div>
                 </td>
                 <td style="vertical-align:middle" >
                     Letter from Social Services
                 </td>
-             </tr>
+            </tr>
+            <tr>
+                <td> 
+                    <div class="checkbox checkboxlist">
+                        <asp:CheckBox id="chkDependentOfAdult" runat="Server" Text="are a dependent of an adult residing legally in the UK who have been given immigration rights as workers to reside in the UK or a dependant of a foreign student where the accompanying parent or legal guardian has a student visa" CssClass="checkbox-inline" ></asp:CheckBox>
+                    </div>
+                </td>
+                <td style="vertical-align:middle" >
+                    Letter confirming immigration rights OR visa status of the adult
+                </td>
+            </tr>
             <tr>
                 <th  class="th-lcg"  colspan="2"><strong>SECTION 2</strong></th>
              </tr>
@@ -372,14 +382,14 @@ Hover over me for Verification Type example
     <h4><i class="fa-solid fa-square-caret-right"></i> Equal Opportunities</h4>
 
       <div class="row">
-          <div class="col-sm-6 columns form-group"> 
+          <div class="col-sm-6 columns form-group mb-3"> 
            <cc1:StudentEnrolmentField StudentEnrolmentFieldType="EthnicGroupID" ID="StudentEnrolmentField3" runat="server" IsRequired="true" Width="200" CustomCaption="* What is your ethnic group" LabelWidth="300"/>
           </div>
 
     </div>
 
     <div class="row">
-      <div class="col-sm-12 columns form-group"> 
+      <div class="col-sm-12 columns form-group mb-3"> 
         <p><strong>* Do you consider yourself to have a long term disability, health problem or any learning difficulties?</strong></p>          
             <asp:DropDownList runat="server" ID="selectLearnDiff"  CssClass="textfield form-control" Width="200" >
                 <asp:ListItem Text="Please select..." Value=""></asp:ListItem>
@@ -393,7 +403,7 @@ Hover over me for Verification Type example
           </div>
     </div>
     <div class="row"  id="disfields">
-      <div class="col-sm-6 columns form-group"> 
+      <div class="col-sm-6 columns form-group mb-3"> 
              <cc1:StudentEnrolmentField StudentEnrolmentFieldType="DisabilityCategory1ID" ID="stuDisabilityCategory1ID" runat="server" LabelWidth="300" IsRequired="false" CustomCaption="* Please specify main learning/disability" ExcludedIDValues="99"/>
               <cc1:StudentEnrolmentField StudentEnrolmentFieldType="DisabilityCategory2ID" runat="server" Visible="true" IsRequired="false"  LabelWidth="300" CustomCaption="And, if appropriate, a secondary learning difficulty" />
         </div>
@@ -403,7 +413,7 @@ Hover over me for Verification Type example
         <hr /><strong>Upload area:</strong><br />
 
     <div class="row">
-       <div class="col-sm-12 columns form-group"> 
+       <div class="col-sm-12 columns form-group mb-3"> 
           <p>It is a requirement for Learning Curve Group to verify that we have seen personal identification for each of our learners.</p> </div>
       </div>
 

@@ -27,6 +27,10 @@ Partial Class courseenrol
         'Get SalesForce ID from query string or session
         Dim SalesForceID As String = SalesForceHelper.GetAndSetSalesForceID(Me.Request, Me.Session)
 
+        'Ensure Young Carer is set as blank
+        WorkingData.EnrolmentRequestRow.YoungCarer = Nothing
+        WorkingData.EnrolmentRequestRow.YoungParent = Nothing
+
     End Sub
 
     Protected Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
